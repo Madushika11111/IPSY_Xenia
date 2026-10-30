@@ -1,0 +1,8 @@
+{
+  "channel": "web",
+  "rulesetTemplate": "Ruleset1",
+  "ruleTemplate": "Age>20",
+  "controlEntry": "Automation Card1",
+  "variantEntry": "Automation Card 2",
+  "variantTraffic": 50
+}

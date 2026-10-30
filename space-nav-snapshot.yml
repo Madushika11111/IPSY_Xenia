@@ -1,0 +1,395 @@
+- generic [ref=f25e19]:
+  - banner [ref=f25e20]:
+    - link "Skip to main content" [ref=f25e21] [cursor=pointer]:
+      - /url: "#main-content"
+    - navigation [ref=f25e23]:
+      - generic [ref=f25e24]:
+        - link "Navigate to home page" [ref=f25e25] [cursor=pointer]:
+          - /url: /spaces/x7vqsodnrlg0/environments/qa/home
+        - generic "Main Navigation" [ref=f25e32]:
+          - link "Content model" [ref=f25e33] [cursor=pointer]:
+            - /url: /spaces/x7vqsodnrlg0/environments/qa/content_types
+          - link "Content" [ref=f25e37] [cursor=pointer]:
+            - /url: /spaces/x7vqsodnrlg0/environments/qa/views/entries
+          - link "Media" [ref=f25e42] [cursor=pointer]:
+            - /url: /spaces/x7vqsodnrlg0/environments/qa/views/assets
+          - link "AI & Automations" [ref=f25e46] [cursor=pointer]:
+            - /url: /spaces/x7vqsodnrlg0/environments/qa/ai_automations
+          - button "Apps" [ref=f25e50] [cursor=pointer]
+      - generic [ref=f25e56]:
+        - generic "Promotions" [ref=f25e57]:
+          - button "Upgrade your free plan" [ref=f25e61] [cursor=pointer]
+        - generic [ref=f25e67]:
+          - generic:
+            - dialog "Side Panel" [ref=f25e2335]:
+              - generic [ref=f25e2336]:
+                - generic [ref=f25e2338]:
+                  - button "Close panel" [active] [ref=f25e2339] [cursor=pointer]
+                  - button "Xenia_Version1" [ref=f25e2344] [cursor=pointer]:
+                    - generic [ref=f25e2345]:
+                      - generic [ref=f25e2346]: XE
+                      - generic "Xenia_Version1" [ref=f25e2347]
+                - generic [ref=f25e2351]:
+                  - heading "Spaces" [level=2] [ref=f25e2352]
+                  - list [ref=f25e2354]:
+                    - listitem [ref=f25e2355]:
+                      - button "Xenia Version 1 Space" [ref=f25e2356] [cursor=pointer]
+                      - region [ref=f25e2363]:
+                        - list [ref=f25e2364]:
+                          - listitem [ref=f25e2365]:
+                            - button [ref=f25e2366] [cursor=pointer]:
+                              - link "master" [ref=f25e2367]:
+                                - /url: /spaces/x7vqsodnrlg0
+                                - generic "master" [ref=f25e2372]
+                          - listitem [ref=f25e2374]:
+                            - button [ref=f25e2375] [cursor=pointer]:
+                              - link "qa" [ref=f25e2376]:
+                                - /url: /spaces/x7vqsodnrlg0/environments/qa
+                                - generic "qa" [ref=f25e2384]
+                - generic [ref=f25e2386]:
+                  - button [ref=f25e2387] [cursor=pointer]:
+                    - link "Add space" [ref=f25e2388]:
+                      - /url: /account/organizations/78IuQTY05RWYFdrLArOIoG/subscription_overview/space_create
+                  - button [ref=f25e2393] [cursor=pointer]:
+                    - link "Taxonomy Manager" [ref=f25e2394]:
+                      - /url: /account/organizations/78IuQTY05RWYFdrLArOIoG/taxonomy/concept-schemes
+                  - button [ref=f25e2399] [cursor=pointer]:
+                    - link "Organization settings & subscriptions" [ref=f25e2400]:
+                      - /url: /account/organizations/78IuQTY05RWYFdrLArOIoG/licenses
+            - button "Close Panel" [ref=f25e2406] [cursor=pointer]
+          - button "Open side panel" [ref=f25e69] [cursor=pointer]:
+            - generic [ref=f25e72]:
+              - generic [ref=f25e73]: Xenia Version 1 Space
+              - generic [ref=f25e77]: qa
+        - generic [ref=f25e84]:
+          - generic "Secondary Navigation" [ref=f25e85]:
+            - button "Press \"/\" to open quick search" [ref=f25e88] [cursor=pointer]
+            - button "Help menu" [ref=f25e93] [cursor=pointer]
+            - button "Search docs" [ref=f25e98] [cursor=pointer]
+            - button "Settings menu" [ref=f25e103] [cursor=pointer]
+          - generic "Account Navigation" [ref=f25e106]:
+            - button "Account menu" [ref=f25e110] [cursor=pointer]
+  - main [ref=f25e114]:
+    - iframe [ref=f25e2334]:
+      - generic [ref=f31e1]:
+        - generic [ref=f31e3]:
+          - navigation [ref=f31e4]:
+            - generic [ref=f31e5]:
+              - button "Overview" [ref=f31e6] [cursor=pointer]
+              - list [ref=f31e9]:
+                - listitem [ref=f31e10]:
+                  - link "Dashboard" [ref=f31e11] [cursor=pointer]:
+                    - /url: /
+                - listitem [ref=f31e17]:
+                  - link "Advanced search" [ref=f31e18] [cursor=pointer]:
+                    - /url: /search
+                - listitem [ref=f31e24]:
+                  - link "Campaigns calendar" [ref=f31e25] [cursor=pointer]:
+                    - /url: /events
+            - generic [ref=f31e30]:
+              - button "Campaigns" [ref=f31e31] [cursor=pointer]
+              - list [ref=f31e34]:
+                - listitem [ref=f31e35]:
+                  - link "Personalization" [ref=f31e36] [cursor=pointer]:
+                    - /url: /campaigns
+                    - button [ref=f31e43]
+                - listitem [ref=f31e48]:
+                  - link "Content testing" [ref=f31e49] [cursor=pointer]:
+                    - /url: /ab-testing
+                    - button [ref=f31e57]
+                - listitem [ref=f31e62]:
+                  - link "Marketing" [ref=f31e63] [cursor=pointer]:
+                    - /url: /marketing
+                    - button [ref=f31e69]
+                - listitem [ref=f31e74]:
+                  - link "Redirection" [ref=f31e75] [cursor=pointer]:
+                    - /url: /redirection
+                    - button [ref=f31e81]
+                - listitem [ref=f31e86]:
+                  - link "Gradual rollout" [ref=f31e87] [cursor=pointer]:
+                    - /url: /gradual-rollout
+                    - button [ref=f31e93]
+                - listitem [ref=f31e98]:
+                  - link "Eligibility" [ref=f31e99] [cursor=pointer]:
+                    - /url: /eligibility
+                    - button [ref=f31e106]
+            - generic [ref=f31e111]:
+              - button "Templates" [ref=f31e112] [cursor=pointer]
+              - list:
+                - listitem [ref=f31e116]:
+                  - link "Rule sets" [ref=f31e117] [cursor=pointer]:
+                    - /url: /rule-sets
+                - listitem [ref=f31e121]:
+                  - link "Rules" [ref=f31e122] [cursor=pointer]:
+                    - /url: /rules
+            - generic [ref=f31e130]:
+              - button "Configuration" [ref=f31e131] [cursor=pointer]
+              - list:
+                - listitem [ref=f31e135]:
+                  - link "Tables" [ref=f31e136] [cursor=pointer]:
+                    - /url: /tables
+                - listitem [ref=f31e141]:
+                  - link "Attributes" [ref=f31e142] [cursor=pointer]:
+                    - /url: /attributes
+                - listitem [ref=f31e148]:
+                  - link "Channels" [ref=f31e149] [cursor=pointer]:
+                    - /url: /channels
+            - generic [ref=f31e154]:
+              - button "Migrations" [ref=f31e155] [cursor=pointer]
+              - list [ref=f31e158]:
+                - listitem [ref=f31e159]:
+                  - link "Migration requests 39" [ref=f31e160] [cursor=pointer]:
+                    - /url: /migration-requests
+                    - generic [ref=f31e167]: Migration requests
+                    - generic [ref=f31e168]: "39"
+            - generic [ref=f31e169]:
+              - button "Admin Settings" [ref=f31e170] [cursor=pointer]
+              - list:
+                - listitem [ref=f31e174]:
+                  - link "Roles & permissions" [ref=f31e175] [cursor=pointer]:
+                    - /url: /roles-and-permissions
+                - listitem [ref=f31e183]:
+                  - link "Organization config" [ref=f31e184] [cursor=pointer]:
+                    - /url: /organization-config
+          - generic [ref=f31e192]:
+            - heading "Dashboard" [level=2] [ref=f31e194]
+            - generic [ref=f31e195]:
+              - generic [ref=f31e196]:
+                - generic [ref=f31e197]:
+                  - generic [ref=f31e198]:
+                    - heading "Live" [level=3] [ref=f31e199]
+                    - button [ref=f31e200] [cursor=pointer]
+                  - generic [ref=f31e205]: "186"
+                - generic [ref=f31e206]:
+                  - link "Personalization - 51" [ref=f31e207] [cursor=pointer]:
+                    - /url: /campaigns?status=active-running&dates=all
+                    - generic [ref=f31e208]: Personalization
+                    - generic [ref=f31e209]: "-"
+                    - generic [ref=f31e210]: "51"
+                  - link "Content testing - 16" [ref=f31e211] [cursor=pointer]:
+                    - /url: /ab-testing?status=active-running&dates=all
+                    - generic [ref=f31e212]: Content testing
+                    - generic [ref=f31e213]: "-"
+                    - generic [ref=f31e214]: "16"
+                  - link "Marketing - 63" [ref=f31e215] [cursor=pointer]:
+                    - /url: /marketing?status=active-running&dates=all
+                    - generic [ref=f31e216]: Marketing
+                    - generic [ref=f31e217]: "-"
+                    - generic [ref=f31e218]: "63"
+                  - link "Redirection - 27" [ref=f31e219] [cursor=pointer]:
+                    - /url: /redirection?status=active-running&dates=all
+                    - generic [ref=f31e220]: Redirection
+                    - generic [ref=f31e221]: "-"
+                    - generic [ref=f31e222]: "27"
+                  - link "Gradual rollout - 12" [ref=f31e223] [cursor=pointer]:
+                    - /url: /gradual-rollout?status=active-running&dates=all
+                    - generic [ref=f31e224]: Gradual rollout
+                    - generic [ref=f31e225]: "-"
+                    - generic [ref=f31e226]: "12"
+                  - link "Eligibility - 17" [ref=f31e227] [cursor=pointer]:
+                    - /url: /eligibility?status=active-running&dates=all
+                    - generic [ref=f31e228]: Eligibility
+                    - generic [ref=f31e229]: "-"
+                    - generic [ref=f31e230]: "17"
+              - generic [ref=f31e231]:
+                - generic [ref=f31e232]:
+                  - generic [ref=f31e233]:
+                    - heading "Scheduled" [level=3] [ref=f31e234]
+                    - button [ref=f31e235] [cursor=pointer]
+                  - generic [ref=f31e240]: "2"
+                - generic [ref=f31e241]:
+                  - link "Personalization - 0" [ref=f31e242] [cursor=pointer]:
+                    - /url: /campaigns?status=active-scheduled&dates=all
+                    - generic [ref=f31e243]: Personalization
+                    - generic [ref=f31e244]: "-"
+                    - generic [ref=f31e245]: "0"
+                  - link "Content testing - 1" [ref=f31e246] [cursor=pointer]:
+                    - /url: /ab-testing?status=active-scheduled&dates=all
+                    - generic [ref=f31e247]: Content testing
+                    - generic [ref=f31e248]: "-"
+                    - generic [ref=f31e249]: "1"
+                  - link "Marketing - 1" [ref=f31e250] [cursor=pointer]:
+                    - /url: /marketing?status=active-scheduled&dates=all
+                    - generic [ref=f31e251]: Marketing
+                    - generic [ref=f31e252]: "-"
+                    - generic [ref=f31e253]: "1"
+                  - link "Redirection - 0" [ref=f31e254] [cursor=pointer]:
+                    - /url: /redirection?status=active-scheduled&dates=all
+                    - generic [ref=f31e255]: Redirection
+                    - generic [ref=f31e256]: "-"
+                    - generic [ref=f31e257]: "0"
+                  - link "Gradual rollout - 0" [ref=f31e258] [cursor=pointer]:
+                    - /url: /gradual-rollout?status=active-scheduled&dates=all
+                    - generic [ref=f31e259]: Gradual rollout
+                    - generic [ref=f31e260]: "-"
+                    - generic [ref=f31e261]: "0"
+                  - link "Eligibility - 0" [ref=f31e262] [cursor=pointer]:
+                    - /url: /eligibility?status=active-scheduled&dates=all
+                    - generic [ref=f31e263]: Eligibility
+                    - generic [ref=f31e264]: "-"
+                    - generic [ref=f31e265]: "0"
+              - generic [ref=f31e266]:
+                - generic [ref=f31e267]:
+                  - generic [ref=f31e268]:
+                    - heading "Paused" [level=3] [ref=f31e269]
+                    - button [ref=f31e270] [cursor=pointer]
+                  - generic [ref=f31e275]: "30"
+                - generic [ref=f31e276]:
+                  - link "Personalization - 13" [ref=f31e277] [cursor=pointer]:
+                    - /url: /campaigns?status=inactive-running&dates=all
+                    - generic [ref=f31e278]: Personalization
+                    - generic [ref=f31e279]: "-"
+                    - generic [ref=f31e280]: "13"
+                  - link "Content testing - 4" [ref=f31e281] [cursor=pointer]:
+                    - /url: /ab-testing?status=inactive-running&dates=all
+                    - generic [ref=f31e282]: Content testing
+                    - generic [ref=f31e283]: "-"
+                    - generic [ref=f31e284]: "4"
+                  - link "Marketing - 4" [ref=f31e285] [cursor=pointer]:
+                    - /url: /marketing?status=inactive-running&dates=all
+                    - generic [ref=f31e286]: Marketing
+                    - generic [ref=f31e287]: "-"
+                    - generic [ref=f31e288]: "4"
+                  - link "Redirection - 5" [ref=f31e289] [cursor=pointer]:
+                    - /url: /redirection?status=inactive-running&dates=all
+                    - generic [ref=f31e290]: Redirection
+                    - generic [ref=f31e291]: "-"
+                    - generic [ref=f31e292]: "5"
+                  - link "Gradual rollout - 2" [ref=f31e293] [cursor=pointer]:
+                    - /url: /gradual-rollout?status=inactive-running&dates=all
+                    - generic [ref=f31e294]: Gradual rollout
+                    - generic [ref=f31e295]: "-"
+                    - generic [ref=f31e296]: "2"
+                  - link "Eligibility - 2" [ref=f31e297] [cursor=pointer]:
+                    - /url: /eligibility?status=inactive-running&dates=all
+                    - generic [ref=f31e298]: Eligibility
+                    - generic [ref=f31e299]: "-"
+                    - generic [ref=f31e300]: "2"
+              - generic [ref=f31e301]:
+                - generic [ref=f31e302]:
+                  - generic [ref=f31e303]:
+                    - heading "Draft" [level=3] [ref=f31e304]
+                    - button [ref=f31e305] [cursor=pointer]
+                  - generic [ref=f31e310]: "100"
+                - generic [ref=f31e311]:
+                  - link "Personalization - 34" [ref=f31e312] [cursor=pointer]:
+                    - /url: /campaigns?status=draft&dates=all
+                    - generic [ref=f31e313]: Personalization
+                    - generic [ref=f31e314]: "-"
+                    - generic [ref=f31e315]: "34"
+                  - link "Content testing - 10" [ref=f31e316] [cursor=pointer]:
+                    - /url: /ab-testing?status=draft&dates=all
+                    - generic [ref=f31e317]: Content testing
+                    - generic [ref=f31e318]: "-"
+                    - generic [ref=f31e319]: "10"
+                  - link "Marketing - 24" [ref=f31e320] [cursor=pointer]:
+                    - /url: /marketing?status=draft&dates=all
+                    - generic [ref=f31e321]: Marketing
+                    - generic [ref=f31e322]: "-"
+                    - generic [ref=f31e323]: "24"
+                  - link "Redirection - 16" [ref=f31e324] [cursor=pointer]:
+                    - /url: /redirection?status=draft&dates=all
+                    - generic [ref=f31e325]: Redirection
+                    - generic [ref=f31e326]: "-"
+                    - generic [ref=f31e327]: "16"
+                  - link "Gradual rollout - 4" [ref=f31e328] [cursor=pointer]:
+                    - /url: /gradual-rollout?status=draft&dates=all
+                    - generic [ref=f31e329]: Gradual rollout
+                    - generic [ref=f31e330]: "-"
+                    - generic [ref=f31e331]: "4"
+                  - link "Eligibility - 12" [ref=f31e332] [cursor=pointer]:
+                    - /url: /eligibility?status=draft&dates=all
+                    - generic [ref=f31e333]: Eligibility
+                    - generic [ref=f31e334]: "-"
+                    - generic [ref=f31e335]: "12"
+              - generic [ref=f31e336]:
+                - generic [ref=f31e337]:
+                  - generic [ref=f31e338]:
+                    - heading "Expired" [level=3] [ref=f31e339]
+                    - button [ref=f31e340] [cursor=pointer]
+                  - generic [ref=f31e345]: "62"
+                - generic [ref=f31e346]:
+                  - link "Personalization - 11" [ref=f31e347] [cursor=pointer]:
+                    - /url: /campaigns?status=stopped&dates=all
+                    - generic [ref=f31e348]: Personalization
+                    - generic [ref=f31e349]: "-"
+                    - generic [ref=f31e350]: "11"
+                  - link "Content testing - 6" [ref=f31e351] [cursor=pointer]:
+                    - /url: /ab-testing?status=stopped&dates=all
+                    - generic [ref=f31e352]: Content testing
+                    - generic [ref=f31e353]: "-"
+                    - generic [ref=f31e354]: "6"
+                  - link "Marketing - 8" [ref=f31e355] [cursor=pointer]:
+                    - /url: /marketing?status=stopped&dates=all
+                    - generic [ref=f31e356]: Marketing
+                    - generic [ref=f31e357]: "-"
+                    - generic [ref=f31e358]: "8"
+                  - link "Redirection - 11" [ref=f31e359] [cursor=pointer]:
+                    - /url: /redirection?status=stopped&dates=all
+                    - generic [ref=f31e360]: Redirection
+                    - generic [ref=f31e361]: "-"
+                    - generic [ref=f31e362]: "11"
+                  - link "Gradual rollout - 15" [ref=f31e363] [cursor=pointer]:
+                    - /url: /gradual-rollout?status=stopped&dates=all
+                    - generic [ref=f31e364]: Gradual rollout
+                    - generic [ref=f31e365]: "-"
+                    - generic [ref=f31e366]: "15"
+                  - link "Eligibility - 11" [ref=f31e367] [cursor=pointer]:
+                    - /url: /eligibility?status=stopped&dates=all
+                    - generic [ref=f31e368]: Eligibility
+                    - generic [ref=f31e369]: "-"
+                    - generic [ref=f31e370]: "11"
+            - link "View all campaigns" [ref=f31e371] [cursor=pointer]:
+              - /url: /search
+            - generic [ref=f31e373]:
+              - generic [ref=f31e375]:
+                - generic [ref=f31e376]: Campaigns
+                - generic [ref=f31e377]:
+                  - combobox [ref=f31e378] [cursor=pointer]:
+                    - generic: Live
+                  - combobox [ref=f31e382] [cursor=pointer]:
+                    - generic: Today
+              - generic [ref=f31e385]:
+                - img [ref=f31e389] [cursor=pointer]:
+                  - generic [ref=f31e392]:
+                    - generic [ref=f31e393]:
+                      - generic [ref=f31e394]: 00:00
+                      - generic [ref=f31e396]: 01:00
+                      - generic [ref=f31e398]: 02:00
+                      - generic [ref=f31e400]: 03:00
+                      - generic [ref=f31e402]: 04:00
+                      - generic [ref=f31e404]: 05:00
+                      - generic [ref=f31e406]: 06:00
+                      - generic [ref=f31e408]: 07:00
+                      - generic [ref=f31e410]: 08:00
+                      - generic [ref=f31e412]: 09:00
+                      - generic [ref=f31e414]: 10:00
+                      - generic [ref=f31e416]: 11:00
+                      - generic [ref=f31e418]: 12:00
+                      - generic [ref=f31e420]: 13:00
+                      - generic [ref=f31e422]: 14:00
+                      - generic [ref=f31e424]: 15:00
+                      - generic [ref=f31e426]: 16:00
+                      - generic [ref=f31e428]: 17:00
+                      - generic [ref=f31e430]: 18:00
+                      - generic [ref=f31e432]: 19:00
+                      - generic [ref=f31e434]: 20:00
+                      - generic [ref=f31e436]: 21:00
+                      - generic [ref=f31e438]: 22:00
+                      - generic [ref=f31e440]: 23:00
+                    - generic [ref=f31e442]: Time
+                  - generic [ref=f31e443]:
+                    - generic [ref=f31e444]:
+                      - generic [ref=f31e445]: "0"
+                      - generic [ref=f31e447]: "20"
+                      - generic [ref=f31e449]: "40"
+                      - generic [ref=f31e451]: "76"
+                    - generic [ref=f31e453]: No. of campaigns
+                - generic [ref=f31e610]:
+                  - generic [ref=f31e611]: Personalization
+                  - generic [ref=f31e614]: Content testing
+                  - generic [ref=f31e617]: Marketing
+                  - generic [ref=f31e620]: Redirection
+                  - generic [ref=f31e623]: Gradual Rollout
+                  - generic [ref=f31e626]: Eligibility
+        - generic [ref=f31e629]: "76"

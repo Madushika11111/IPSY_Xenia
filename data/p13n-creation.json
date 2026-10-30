@@ -1,0 +1,8 @@
+{
+  "channel": "web",
+  "rulesetTemplate": "Ruleset1",
+  "ruleTemplate": "Age>20",
+  "controlEntry": "Retest_new1",
+  "variantEntry": "content status_4",
+  "variantTraffic": 50
+}

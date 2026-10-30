@@ -1,0 +1,8 @@
+{
+  "fixtureEntry": "Automation Card 2",
+  "variantEntry": "Automation Card1",
+  "channel": "web",
+  "secondChannel": "mobile",
+  "ruleTemplate": "Age>20",
+  "ruleName": "ManualRule"
+}

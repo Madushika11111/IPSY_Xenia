@@ -1,0 +1,1126 @@
+================================================================================
+ELIGIBILITY CAMPAIGNS — FULL TEST CASE DOCUMENT
+Project   : Xenia App (Contentful CMS Embedded)
+Module    : Eligibility Campaigns
+Total TCs : 26 Test Cases | 93 Sub-scenarios
+Status    : All PASS (Last Run: 93/93)
+================================================================================
+
+
+================================================================================
+TC-EL-001 | Eligibility Tab Visibility in Side Menu
+================================================================================
+Description    : Verify the "Eligibility" link is visible in the side navigation
+                 menu under the Campaigns section.
+
+Test Steps     : 1. Log in and navigate to the Xenia app.
+                 2. Locate the Campaigns section in the left side menu.
+                 3. Check for the "Eligibility" link.
+
+Expected Result: "Eligibility" link is visible in the side menu under Campaigns.
+
+Actual Result  : "Eligibility" tab visible in side menu.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-002 | Navigation to Eligibility Campaign List Page
+================================================================================
+Description    : Verify clicking the Eligibility tab navigates to the campaign
+                 list page with the correct page title.
+
+Test Steps     : 1. Log in and navigate to the Xenia app.
+                 2. Click the "Eligibility" link in the side menu.
+                 3. Verify the page title reads "Eligibility campaigns".
+
+Expected Result: User is navigated to the Eligibility campaigns list page and
+                 the heading "Eligibility campaigns" is displayed.
+
+Actual Result  : Page title "Eligibility campaigns" is visible.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-003 | "+ Campaigns" Creation Button Visible
+================================================================================
+Description    : Verify the "+ Campaigns" button is displayed on the Eligibility
+                 campaign list page.
+
+Test Steps     : 1. Navigate to the Eligibility campaigns list page.
+                 2. Check for the "+ Campaigns" button in the top-right area.
+
+Expected Result: "+ Campaigns" creation button is visible on the list page.
+
+Actual Result  : "+ Campaigns" button is visible.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-004 | Open Campaign Creation Form
+================================================================================
+Description    : Verify clicking "+ Campaigns" opens the campaign creation form
+                 with the correct heading.
+
+Test Steps     : 1. Navigate to the Eligibility campaigns list page.
+                 2. Click the "+ Campaigns" button.
+                 3. Verify the form heading reads "Create campaign".
+                 4. Click Cancel to close the form.
+
+Expected Result: Create campaign form opens with heading "Create campaign".
+
+Actual Result  : "Create campaign" heading is visible after clicking button.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-005 | All Fields, Action Buttons, and Ruleset Default State
+================================================================================
+Description    : Verify all required form fields, action buttons, and the
+                 Ruleset default state are visible on the campaign creation form.
+
+Test Steps     : 1. Navigate to the Eligibility campaigns list page.
+                 2. Click "+ Campaigns" to open the creation form.
+                 3. Verify the following fields are visible:
+                    - Campaign name *
+                    - Campaign start date & time (PST)*
+                    - Channels
+                    - Set campaign end date & time (PST) (optional)
+                    - Campaign ID *
+                    - Description
+                    - Ruleset section
+                 4. Verify action buttons: Save & Activate Campaign,
+                    Save Campaign as Draft, Cancel.
+                 5. Verify Ruleset default state shows "No channels selected".
+                 6. Click Cancel.
+
+Expected Result: All fields, buttons, and "No channels selected" default are visible.
+
+Actual Result  : All fields visible; "No channels selected" shown in Ruleset.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-006 | Validation Errors on Empty Form — Save & Activate
+================================================================================
+Description    : Verify that clicking "Save & Activate Campaign" with an empty
+                 form displays all 4 required-field validation errors.
+
+Test Steps     : 1. Navigate to the Eligibility campaigns list page.
+                 2. Click "+ Campaigns".
+                 3. Leave all fields empty.
+                 4. Click "Save & Activate Campaign".
+                 5. Verify the following inline errors appear:
+                    - "Please enter campaign name"
+                    - "Please select campaign start date & time"
+                    - "Please select at least one channel"
+                    - "Please enter campaign ID"
+                 6. Verify no error for end date (it is optional).
+                 7. Click Cancel.
+
+Expected Result: 4 validation errors appear; end date shows no error.
+
+Actual Result  : All 4 required-field errors displayed as expected.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-007 | Draft Validation Notification and Inline Error
+================================================================================
+Description    : Verify "Save Campaign as Draft" shows validation notification
+                 on empty form, and inline error when only name is filled.
+
+Test Steps     : SC-1 — Empty form:
+                 1. Open the Create campaign form.
+                 2. Leave all fields empty.
+                 3. Click "Save Campaign as Draft".
+                 4. Verify a validation notification appears.
+
+                 SC-2 — Name only:
+                 5. Fill Campaign name field only.
+                 6. Click "Save Campaign as Draft".
+                 7. Verify "Please enter campaign id" inline error.
+                 8. Verify validation notification also appears.
+                 9. Click Cancel.
+
+Expected Result: SC-1: Notification shown. SC-2: Inline error + notification shown.
+                 Both Campaign name and Campaign ID required for draft save.
+
+Actual Result  : Notification and inline errors shown as expected.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-008 | Past Start Date Validation Error
+================================================================================
+Description    : Verify a validation error appears when the campaign start date
+                 is set to a past date.
+
+Test Steps     : 1. Open the Create campaign form.
+                 2. Fill in the Campaign name field.
+                 3. Set Campaign start date to yesterday (past date).
+                 4. Click the Campaign name field to trigger validation.
+                 5. Verify error: "Campaign start date & time should be greater
+                    than current date & time".
+                 6. Click Cancel.
+
+Expected Result: Validation error is shown for past start date.
+
+Actual Result  : Error message displayed for past start date.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-009 | End Date Before Start Date Validation Error
+================================================================================
+Description    : Verify a validation error appears when the end date is set
+                 before the start date.
+
+Test Steps     : 1. Open the Create campaign form.
+                 2. Set start date to 5 days from now at 2:00 PM.
+                 3. Enable the end date toggle.
+                 4. Set end date to 3 days from now at 2:00 PM (before start).
+                 5. Verify error: "Campaign end date & time should be greater
+                    than campaign start date & time".
+                 6. Click Cancel.
+
+Expected Result: Validation error is shown for end date before start date.
+
+Actual Result  : End-date-before-start error displayed correctly.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-010 | "No channels selected" Default Ruleset State
+================================================================================
+Description    : Verify the Ruleset section shows "No channels selected" before
+                 any channel is added.
+
+Test Steps     : 1. Open the Create campaign form.
+                 2. Without selecting any channel, observe the Ruleset section.
+                 3. Verify "No channels selected" message is displayed.
+                 4. Click Cancel.
+
+Expected Result: "No channels selected" is displayed in the Ruleset section.
+
+Actual Result  : "No channels selected" shown before any channel is added.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-011 | Channel Accordion and Add Ruleset Button After Channel Selection
+================================================================================
+Description    : Verify adding a channel creates its accordion in the Ruleset
+                 section and the "Add ruleset" button appears.
+
+Test Steps     : 1. Open the Create campaign form.
+                 2. Verify Ruleset shows "No channels selected".
+                 3. Select a random channel from the Channels dropdown.
+                 4. Verify the selected channel appears as an accordion in Ruleset.
+                 5. Verify "Add ruleset" button is visible inside the accordion.
+                 6. Verify ruleset content shows "No records found" (empty).
+                 7. Click Cancel.
+
+Expected Result: Channel accordion and "Add ruleset" button visible; content empty.
+
+Actual Result  : Channel accordion, Add ruleset button, and No records found visible.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-012 | Separate Ruleset Accordion for Each Channel
+================================================================================
+Description    : Verify each selected channel gets its own separate Ruleset
+                 accordion section.
+
+Test Steps     : 1. Open the Create campaign form.
+                 2. Select Channel 1 from the dropdown.
+                 3. Verify Channel 1 accordion is visible in Ruleset.
+                 4. Select Channel 2 from the dropdown.
+                 5. Verify Channel 2 accordion is visible in Ruleset.
+                 6. Verify both Channel 1 and Channel 2 accordions are
+                    simultaneously visible.
+                 7. Click Cancel.
+
+Expected Result: Each channel has its own separate Ruleset accordion section.
+
+Actual Result  : Both channels have separate accordion sections visible.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-013 | Campaign ID Format Validation Error
+================================================================================
+Description    : Verify a format validation error appears when the Campaign ID
+                 contains invalid characters (e.g., special characters).
+
+Test Steps     : 1. Open the Create campaign form.
+                 2. Enter "test@invalid!" in the Campaign ID field.
+                 3. Verify error: "Campaign ID can only contain..." is shown.
+                 4. Click Cancel.
+
+Expected Result: Format validation error shown for invalid Campaign ID characters.
+
+Actual Result  : "Campaign ID can only contain..." error displayed.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-014 | Channel Removal — Cancel and Confirm
+================================================================================
+Description    : Verify cancelling channel removal preserves both channels, and
+                 confirming removal removes the selected channel.
+
+Test Steps     : SC-1 — Both channels visible:
+                 1. Open the Create campaign form.
+                 2. Select Channel 1 and Channel 2.
+                 3. Verify both channels appear as accordion sections in Ruleset.
+
+                 SC-2 — Cancel removal:
+                 4. Click the Remove (×) button for Channel 1.
+                 5. Verify "Are you sure?" confirmation dialog appears.
+                 6. Click "No" (Cancel).
+                 7. Verify Channel 1 and Channel 2 are still present.
+
+                 SC-3 — Confirm removal:
+                 8. Click the Remove (×) button for Channel 2.
+                 9. Verify confirmation dialog appears.
+                 10. Click "Yes!" (Confirm).
+                 11. Verify Channel 2 accordion is removed.
+                 12. Verify Channel 1 accordion is still present.
+
+Expected Result: SC-1: Both accordions visible. SC-2: Both still present after cancel.
+                 SC-3: Channel 2 removed, Channel 1 remains.
+
+Actual Result  : Cancel preserves both channels; Confirm removes one, keeps other.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-015 | Full Campaign Creation Lifecycle — Ruleset, A/B Testing, Save
+================================================================================
+Description    : Verify the full campaign creation flow including ruleset with
+                 defining rule, A/B testing configuration, and list verification.
+
+Test Steps     : SC-1 — Add ruleset:
+                 1. Open Create campaign form with name, start date, channel, end date.
+                 2. Click "Add ruleset", select a defining rule, and submit.
+                 3. Verify ruleset is added in Inactive state with A/B testing visible.
+
+                 SC-2 — A/B testing default:
+                 4. Verify A/B testing shows "Disabled" by default.
+
+                 SC-3 — Activate ruleset:
+                 5. Toggle ruleset to Active.
+                 6. Verify A/B testing section still visible.
+
+                 SC-4 — Invalid A/B end date:
+                 7. Enable A/B testing.
+                 8. Set A/B end date AFTER the campaign end date.
+                 9. Click Save & Activate. Verify validation error.
+
+                 SC-5 — Valid A/B end date:
+                 10. Set A/B end date within the campaign date range.
+                 11. Set variant traffic value. Verify control auto-adjusts.
+
+                 SC-6 — Save and verify:
+                 12. Save campaign. Verify it appears as Scheduled in the list.
+
+Expected Result: Campaign creation with ruleset, A/B testing saves successfully
+                 and appears as Scheduled with correct details.
+
+Actual Result  : All SCs passed — ruleset, A/B testing, save, and list verified.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-016 | Campaign Creation Using Existing Ruleset with A/B Testing
+================================================================================
+Description    : Verify creating a campaign using an existing ruleset with A/B
+                 testing enabled saves and appears in the list correctly.
+
+Test Steps     : SC-1 — Configure:
+                 1. Open Create campaign form with name, start/end dates, channel.
+                 2. Click "Add ruleset" and select an existing ruleset from dropdown.
+                 3. Verify ruleset is added in Inactive state.
+                 4. Toggle ruleset to Active.
+                 5. Enable A/B testing, set end date and variant traffic %.
+                 6. Save & Activate.
+
+                 SC-2 — Verify in list:
+                 7. Search for the campaign by name.
+                 8. Verify campaign is visible with correct name, channel, and
+                    Scheduled status.
+
+Expected Result: Campaign created with existing ruleset and A/B testing; appears
+                 as Scheduled in the list.
+
+Actual Result  : Campaign saved with existing ruleset, visible in list as Scheduled.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-017 | "Add Ruleset" Sub-drawer Validation Errors
+================================================================================
+Description    : Verify validation errors in the "Add ruleset" sub-drawer when
+                 required fields are missing.
+
+Test Steps     : 1. Open Create campaign form; fill name, start date, and channel.
+                 2. Click "Add ruleset" to open sub-drawer.
+
+                 SC-1 — Empty name:
+                 3. Leave ruleset name empty and click submit.
+                 4. Verify "Please enter ruleset name" error.
+
+                 SC-2 — Name filled, no defining rule:
+                 5. Enter a ruleset name.
+                 6. Click submit without selecting a defining rule.
+                 7. Verify validation error about defining rule.
+                 8. Close the drawer.
+
+Expected Result: SC-1: Name required error shown. SC-2: Defining rule error shown.
+
+Actual Result  : Both validation errors shown as expected.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-018 | "+ Add Ruleset" Requires Campaign Name and Start Date
+================================================================================
+Description    : Verify the "+ Add ruleset" button is blocked without name/start
+                 date, and opens when both are filled.
+
+Test Steps     : SC-1 — Without required fields:
+                 1. Open Create campaign form.
+                 2. Select a channel without filling name or start date.
+                 3. Click "+ Add ruleset".
+                 4. Verify the sub-drawer does NOT open.
+
+                 SC-2 — With required fields:
+                 5. Fill campaign name and start date.
+                 6. Click "+ Add ruleset".
+                 7. Verify the sub-drawer opens successfully.
+                 8. Close drawers.
+
+Expected Result: Sub-drawer blocked without name/start date; opens when filled.
+
+Actual Result  : SC-1: Sub-drawer blocked. SC-2: Sub-drawer opened successfully.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-019 | Validation When Only One Channel Has Ruleset (Multi-channel)
+================================================================================
+Description    : Verify saving is blocked when only one of multiple channels
+                 has a ruleset configured.
+
+Test Steps     : 1. Open Create campaign form.
+                 2. Fill name, start date, and select 2 channels.
+                 3. Add and activate a ruleset for Channel 1 only.
+                 4. Leave Channel 2 without any ruleset.
+                 5. Click "Save & Activate Campaign".
+                 6. Verify validation message blocking the save.
+                 7. Close the form.
+
+Expected Result: Save is blocked with a validation message about the missing
+                 ruleset for Channel 2.
+
+Actual Result  : Validation message displayed; save blocked.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-020 | Multi-channel Campaign — Full Creation with A/B Testing
+================================================================================
+Description    : Verify creating a multi-channel campaign with rulesets for all
+                 channels and A/B testing on one saves and appears correctly.
+
+Test Steps     : SC-1 — Create and save:
+                 1. Open Create campaign form with name, dates, 2 channels.
+                 2. Add and activate a ruleset for Channel 1.
+                 3. Add and activate a ruleset for Channel 2.
+                 4. Enable A/B testing on Channel 2 with end date and variant %.
+                 5. Save & Activate. Verify success notification.
+
+                 SC-2 — Verify in list:
+                 6. Search for the campaign. Verify it's visible in the list.
+                 7. Verify status is Scheduled.
+                 8. Verify both channels appear in the Channels column.
+
+Expected Result: Campaign with 2 channels + A/B testing saves as Scheduled
+                 and shows both channels in the list.
+
+Actual Result  : Multi-channel campaign saved; both channels and Scheduled visible.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-021 | Validation When No Channel Has Ruleset (Multi-channel)
+================================================================================
+Description    : Verify saving is blocked when no channel in a multi-channel
+                 campaign has any ruleset configured.
+
+Test Steps     : 1. Open Create campaign form.
+                 2. Fill name, start date, and select 2 channels.
+                 3. Do NOT add any ruleset to either channel.
+                 4. Click "Save & Activate Campaign".
+                 5. Verify validation message blocking the save.
+                 6. Close the form.
+
+Expected Result: Save is blocked with a validation message about missing rulesets.
+
+Actual Result  : Validation message shown; save blocked for both channels.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-022 | Campaign Saves with A/B Testing Disabled and Enabled
+================================================================================
+Description    : Verify campaign saves successfully both with A/B testing
+                 left as Disabled and with A/B testing enabled.
+
+Test Steps     : SC-1 — A/B testing disabled:
+                 1. Create a campaign with ruleset, A/B testing left as Disabled.
+                 2. Save & Activate. Verify campaign appears as Scheduled.
+
+                 SC-2 — A/B testing enabled:
+                 3. Create another campaign with ruleset.
+                 4. Enable A/B testing, set end date and variant %.
+                 5. Save & Activate. Verify campaign appears as Scheduled.
+
+Expected Result: Both campaigns save successfully and appear as Scheduled.
+
+Actual Result  : Campaigns saved with and without A/B testing; both Scheduled.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-023 | Campaign ID Uniqueness — Duplicate Rejected
+================================================================================
+Description    : Verify that entering an already-used Campaign ID shows an
+                 inline error and prevents saving.
+
+Test Steps     : SC-1:
+                 1. Note a Campaign ID already used in the system.
+                 2. Open Create campaign form.
+                 3. Fill name and enter the existing Campaign ID.
+                 4. Click or tab away from the ID field to trigger async validation.
+                 5. Verify error: "This Campaign ID already..." is shown.
+                 6. Close the form.
+
+Expected Result: Duplicate Campaign ID inline error prevents saving.
+
+Actual Result  : "This Campaign ID already..." error shown for duplicate ID.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-024 | Manual Ruleset, A/B Testing, and Scheduled Action Button Verification
+================================================================================
+Description    : Verify creating a campaign with a manually built ruleset and
+                 A/B testing; verify Scheduled action buttons.
+
+Test Steps     : SC-1 — Create and save:
+                 1. Open Create campaign form; fill name, dates, channel, ID.
+                 2. Add ruleset — build a manual condition (e.g., name contains "m").
+                 3. Verify rule expression preview visible.
+                 4. Submit ruleset; toggle it to Active.
+                 5. Enable A/B testing, set end date and variant %.
+                 6. Save & Activate. Verify success.
+
+                 SC-2 — Verify actions:
+                 7. Search for the campaign in the list.
+                 8. Verify status is Scheduled.
+                 9. Verify these buttons are visible: Share Campaign, View Details,
+                    Edit Campaign, Copy Campaign, Pause Campaign, Stop Campaign.
+                 10. Verify Delete Campaign button is disabled.
+
+Expected Result: Campaign saved; all Scheduled action buttons visible except Delete.
+
+Actual Result  : Campaign visible as Scheduled; all buttons in correct states.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-025 | View Details Action — Campaign Detail Modal
+================================================================================
+Description    : Verify the View Details action opens a read-only modal showing
+                 all campaign information.
+
+Test Steps     : SC-1 — Open modal:
+                 1. Search for a Scheduled campaign in the list.
+                 2. Click the "View Details" button.
+                 3. Verify the campaign detail modal opens with campaign name visible.
+
+                 SC-2 — Verify fields:
+                 4. Verify "Campaign start date & time (PST)" field is visible.
+                 5. Verify "Campaign end date & time (PST)" field is visible.
+                 6. Verify "Channel" field is visible.
+                 7. Verify "Campaign ID" field is visible.
+
+                 SC-3 — Verify ruleset table:
+                 8. Verify the Ruleset table with "Rule Name" and "Rule Status"
+                    column headers is visible.
+
+                 SC-4 — Close modal:
+                 9. Click the × button to close the modal.
+                 10. Verify Eligibility campaigns list is displayed again.
+
+Expected Result: Modal shows all fields and ruleset table; closes correctly.
+
+Actual Result  : All fields, ruleset table visible; modal closes to list.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-026 | Edit Campaign Action — Update Form Pre-filled
+================================================================================
+Description    : Verify the Edit Campaign action opens the Update campaign form
+                 pre-filled with existing campaign data.
+
+Test Steps     : SC-1 — Open Update form:
+                 1. Search for a Scheduled campaign in the list.
+                 2. Click "Edit Campaign" button.
+                 3. Verify the "Update campaign" heading is visible.
+
+                 SC-2 — Verify pre-fill:
+                 4. Verify campaign name is pre-filled with the existing name.
+
+                 SC-3 — Verify buttons:
+                 5. Verify "Update Campaign" button is visible.
+                 6. Verify "Cancel" button is visible.
+
+                 SC-4 — Cancel:
+                 7. Click Cancel.
+                 8. Verify user is returned to Eligibility campaigns list.
+
+Expected Result: Update form opens with pre-filled data; Cancel returns to list.
+
+Actual Result  : Update campaign form opens with existing name; Cancel works.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-027 | Copy Campaign Action — Create Form with Cleared Start Date
+================================================================================
+Description    : Verify the Copy Campaign action opens the Create form with
+                 the original campaign data copied but the start date cleared.
+
+Test Steps     : SC-1 — Open copy form:
+                 1. Search for a Scheduled campaign in the list.
+                 2. Click "Copy Campaign" button.
+                 3. Verify "Create campaign" form opens.
+
+                 SC-2 — Verify data copied:
+                 4. Verify campaign name field is pre-filled with the original name.
+
+                 SC-3 — Verify start date cleared:
+                 5. Verify the start date field is empty (must be set anew).
+
+                 SC-4 — Verify buttons:
+                 6. Verify "Save & Activate Campaign", "Save Campaign as Draft",
+                    and "Cancel" buttons are visible.
+
+                 SC-5 — Cancel:
+                 7. Click Cancel.
+                 8. Verify user returns to Eligibility campaigns list.
+
+Expected Result: Copy form has original name copied; start date is blank.
+
+Actual Result  : Copied form has name filled; start date empty; Cancel works.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-028 | Share Campaign Action — Shareable URL Modal
+================================================================================
+Description    : Verify the Share Campaign action opens a modal with a
+                 shareable campaign URL and a Copy Link button.
+
+Test Steps     : SC-1 — Open modal:
+                 1. Search for a Scheduled campaign in the list.
+                 2. Click "Share Campaign" button.
+                 3. Verify "Share Campaign" modal opens.
+
+                 SC-2 — Verify content:
+                 4. Verify a shareable URL is visible in the modal.
+                 5. Verify "Copy Link" button is visible.
+
+                 SC-3 — Close modal:
+                 6. Click the × button to close.
+                 7. Verify campaign list is visible again.
+
+Expected Result: Share modal opens with URL and Copy Link button; closes correctly.
+
+Actual Result  : Share modal shows URL and Copy Link; closes to list.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-029 | Pause Campaign — Dialog UI and Cancel Preserves State
+================================================================================
+Description    : Verify the Pause Campaign dialog UI and that cancelling leaves
+                 the campaign in Scheduled status.
+
+Test Steps     : SC-1 — Open dialog:
+                 1. Search for a Scheduled campaign.
+                 2. Click "Pause Campaign" button.
+                 3. Verify "Pause Campaign?" dialog opens.
+
+                 SC-2 — Verify dialog body:
+                 4. Verify dialog body mentions pausing the campaign.
+
+                 SC-3 — Verify buttons:
+                 5. Verify "Cancel" and "Pause" buttons are visible.
+
+                 SC-4 — Cancel:
+                 6. Click Cancel.
+                 7. Verify dialog closes.
+                 8. Verify campaign status remains Scheduled.
+
+Expected Result: Dialog shows heading, body, and buttons; Cancel preserves Scheduled.
+
+Actual Result  : Dialog UI correct; Cancel closes dialog without changing status.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-030 | Stop Campaign — Dialog UI and Cancel Preserves State
+================================================================================
+Description    : Verify the Stop Campaign dialog warns about Expired status, and
+                 cancelling leaves the campaign in Scheduled status.
+
+Test Steps     : SC-1 — Open dialog:
+                 1. Search for a Scheduled campaign.
+                 2. Click "Stop Campaign" button.
+                 3. Verify "Stop Campaign?" dialog opens.
+
+                 SC-2 — Verify warning:
+                 4. Verify dialog body warns campaign will move to "Expired" status.
+
+                 SC-3 — Verify buttons:
+                 5. Verify "Cancel" and "Stop" buttons are visible.
+
+                 SC-4 — Cancel:
+                 6. Click Cancel.
+                 7. Verify dialog closes.
+                 8. Verify campaign status remains Scheduled.
+
+Expected Result: Dialog warns about Expired status; Cancel preserves Scheduled.
+
+Actual Result  : Dialog UI correct; Cancel closes dialog without stopping campaign.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-031 | Delete Button Disabled for Scheduled Campaigns
+================================================================================
+Description    : Verify the Delete Campaign button is disabled for campaigns in
+                 Scheduled status (deletion only allowed for Expired campaigns).
+
+Test Steps     : 1. Navigate to the Eligibility campaigns list.
+                 2. Filter by All days and search.
+                 3. Locate a campaign with "Scheduled" status.
+                 4. Verify the Delete Campaign button is disabled (grayed out).
+
+Expected Result: Delete Campaign button is disabled for Scheduled campaigns.
+
+Actual Result  : Delete Campaign button shown as disabled for Scheduled status.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-032 | Edit Campaign — Edit Name, Start Date, End Date (Scheduled)
+================================================================================
+Description    : Verify editing a Scheduled campaign's name, start date, and
+                 end date saves successfully and updates persist in the list.
+
+Test Steps     : SC-1 — Save as Scheduled:
+                 1. Create and save a campaign (using Save & Activate).
+                 2. Search by original name. Verify Results (1).
+
+                 SC-2 — Open edit form:
+                 3. Click "Edit Campaign". Verify "Update campaign" heading.
+                 4. Verify campaign name is pre-filled with original name.
+
+                 SC-3 — Edit and save:
+                 5. Fill new name, new start date, enable end date toggle and
+                    fill new end date.
+                 6. Click "Update Campaign".
+                 7. Verify success notification.
+
+                 SC-4 — Search by old name:
+                 8. Navigate to list. Search by original name.
+                 9. Verify Results (0) — old name no longer exists.
+
+                 SC-5 — Search by new name:
+                 10. Search by new name. Verify campaign visible in list.
+
+                 SC-6 — Re-open edit and verify pre-fill:
+                 11. Click Edit Campaign. Verify new name, new start date,
+                     and new end date are pre-filled in the form.
+                 12. Close the form.
+
+Expected Result: Edits save; old name returns 0 results; new name shows updated
+                 data; re-opened form shows all updated values pre-filled.
+
+Actual Result  : All edits persisted; search results correct; pre-fill verified.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-033 | Pause / Resume Lifecycle — Scheduled → Paused → Scheduled
+================================================================================
+Description    : Verify the full Pause/Resume lifecycle of a campaign including
+                 dialog verification and status transitions.
+
+Test Steps     : SC-1 — Save and verify Pause dialog:
+                 1. Create and save a Scheduled campaign.
+                 2. Click "Pause Campaign". Verify "Pause Campaign?" heading,
+                    Cancel and Pause buttons.
+
+                 SC-2 — Cancel Pause:
+                 3. Click Cancel. Verify status remains Scheduled.
+
+                 SC-3 — Confirm Pause:
+                 4. Click "Pause Campaign" again.
+                 5. Click "Pause" (confirm). Verify success notification.
+                 6. Verify status changes to "Paused".
+                 7. Verify "Resume Campaign" button is now visible.
+                 8. Verify "Pause Campaign" button is no longer visible.
+
+                 SC-4 — Verify Resume dialog:
+                 9. Click "Resume Campaign". Verify "Resume Campaign?" heading,
+                    Cancel and Resume buttons.
+
+                 SC-5 — Cancel Resume:
+                 10. Click Cancel. Verify status remains Paused.
+
+                 SC-6 — Confirm Resume:
+                 11. Click "Resume Campaign" again.
+                 12. Click "Resume" (confirm). Verify success notification.
+                 13. Verify status changes back to "Scheduled".
+                 14. Verify "Pause Campaign" button is restored.
+                 15. Verify "Resume Campaign" button is gone.
+
+Expected Result: Full Pause/Resume lifecycle works with correct status transitions.
+
+Actual Result  : All status transitions and button changes verified correctly.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-034 | Paused Campaign — Verify View Details, Edit, Stop, Delete Actions
+================================================================================
+Description    : Verify all available actions for a Paused campaign including
+                 View Details (reads real status), Edit pre-fill, Stop dialog,
+                 and Delete disabled state.
+
+Test Steps     : Setup: Create a campaign, save as Scheduled, then Pause it.
+
+                 SC-1 — View Details:
+                 1. Click "View Details". Verify modal opens.
+                 2. Read and verify campaign name matches saved value.
+                 3. Read and verify campaign ID matches saved value.
+                 4. Read and verify status badge in modal shows "Paused".
+                 5. Verify Campaign start date section is visible.
+                 6. Verify Ruleset table with Rule Name and Rule Status columns.
+                 7. Close modal.
+
+                 SC-2 — Edit Campaign:
+                 8. Click "Edit Campaign". Verify "Update campaign" heading.
+                 9. Read Campaign name — verify it matches saved name.
+                 10. Read Campaign ID — verify it matches saved ID.
+                 11. Read Start date — verify it is not empty.
+                 12. Verify Update Campaign and Cancel buttons are visible.
+                 13. Click Cancel.
+
+                 SC-3 — Stop Campaign:
+                 14. Click "Stop Campaign". Verify Stop dialog opens.
+                 15. Verify dialog warns about Expired status.
+                 16. Verify Stop and Cancel buttons visible.
+                 17. Click Cancel.
+                 18. Read actual status from the row — verify it reads "Paused".
+
+                 SC-4 — Delete disabled:
+                 19. Read the Delete Campaign button's disabled state from the UI.
+                 20. Verify isDisabled() returns true.
+
+Expected Result: View Details shows correct name/ID/status; Edit form pre-filled;
+                 Stop dialog works; Delete button is disabled.
+
+Actual Result  : All actions verified with real values read from UI.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-035 | Edit Campaign on a Paused Campaign — Full Edit Lifecycle
+================================================================================
+Description    : Verify a Paused campaign can be edited (name and start date)
+                 and changes persist in the list and on re-opening the edit form.
+
+Test Steps     : SC-1 — Setup: Save and Pause:
+                 1. Create and save a campaign as Scheduled.
+                 2. Pause the campaign. Verify status = "Paused".
+
+                 SC-2 — Edit and save:
+                 3. Click "Edit Campaign". Verify Update campaign heading.
+                 4. Fill new campaign name.
+                 5. Fill new start date.
+                 6. Click "Update Campaign". Verify success notification.
+
+                 SC-3 — Search by old name:
+                 7. Navigate to list. Search by original name.
+                 8. Verify Results (0) — old name no longer exists.
+
+                 SC-4 — Search by new name:
+                 9. Search by new name. Verify campaign visible.
+                 10. Read actual status from UI — verify "Paused".
+
+                 SC-5 — Re-open edit and verify pre-fill:
+                 11. Click Edit Campaign. Verify new name, new start date,
+                     and original Campaign ID are pre-filled.
+                 12. Close the form.
+
+Expected Result: Paused campaign edit saves; old name returns 0 results; new name
+                 shows Paused status; re-opened form shows updated pre-fill.
+
+Actual Result  : All edits persisted; status remains Paused after edit.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-036 | Stop Campaign — Scheduled → Expired Lifecycle
+================================================================================
+Description    : Verify stopping a Scheduled campaign changes its status to
+                 Expired and updates action button states correctly.
+
+Test Steps     : SC-1 — Confirm Stop:
+                 1. Create and save a campaign as Scheduled.
+                 2. Click "Stop Campaign". Verify Stop dialog.
+                 3. Verify dialog warns campaign will move to Expired.
+                 4. Click "Stop" (confirm). Verify success notification.
+                 5. Wait for status to update. Read actual status — verify "Expired".
+
+                 SC-2 — Verify action buttons:
+                 6. Verify View Details button is visible/enabled.
+                 7. Verify Edit Campaign button is visible/enabled.
+                 8. Verify Copy Campaign button is visible/enabled.
+                 9. Verify Pause Campaign button is disabled.
+                 10. Verify Stop Campaign button is disabled.
+                 11. Read Delete Campaign button state — verify enabled.
+
+                 SC-3 — View Details status:
+                 12. Click View Details. Verify modal opens.
+                 13. Read actual status from modal — verify "Expired".
+                 14. Close modal.
+
+Expected Result: Stopped Scheduled campaign shows Expired status; View/Edit/Copy/Delete
+                 enabled; Pause/Stop disabled; View Details modal shows "Expired".
+
+Actual Result  : Status = Expired; all button states correct; modal status verified.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-037 | Stop Campaign — Paused → Expired Lifecycle
+================================================================================
+Description    : Verify stopping a Paused campaign changes its status to Expired
+                 and updates action button states (including removing Resume).
+
+Test Steps     : SC-1 — Setup and Confirm Stop:
+                 1. Create and save a campaign as Scheduled.
+                 2. Pause the campaign. Verify status = "Paused".
+                 3. Click "Stop Campaign". Verify Stop dialog.
+                 4. Click "Stop" (confirm). Verify success notification.
+                 5. Wait for status to update. Read actual status — verify "Expired".
+
+                 SC-2 — Verify action buttons:
+                 6. Verify View Details, Edit Campaign, Copy Campaign are enabled.
+                 7. Verify Resume Campaign button is NOT visible.
+                 8. Verify Pause Campaign button is disabled.
+                 9. Verify Stop Campaign button is disabled.
+                 10. Read Delete Campaign button state — verify enabled.
+
+                 SC-3 — View Details status:
+                 11. Click View Details. Read status from modal — verify "Expired".
+                 12. Close modal.
+
+Expected Result: Paused campaign stopped → Expired; Resume absent; Pause/Stop
+                 disabled; Delete enabled; View Details modal shows "Expired".
+
+Actual Result  : Status = Expired; Resume not visible; all button states correct.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TC-EL-038 | Delete Campaign — Negative (Scheduled/Paused) and Positive (Expired)
+================================================================================
+Description    : Verify Delete is blocked for Scheduled and Paused campaigns
+                 (negative), and works correctly for Expired campaigns (positive).
+
+Test Steps     : Setup: Create campaign; save in SC-1.
+
+                 SC-1 — Negative: Scheduled campaign:
+                 1. Save the campaign as Scheduled.
+                 2. Read the Delete Campaign button isDisabled() state.
+                 3. Verify isDisabled = true (Delete blocked for Scheduled).
+
+                 SC-2 — Negative: Paused campaign:
+                 4. Click Pause Campaign → confirm.
+                 5. Verify status = "Paused".
+                 6. Read Delete Campaign button isDisabled() state.
+                 7. Verify isDisabled = true (Delete blocked for Paused).
+
+                 SC-3 — Positive pre-condition: Enable Delete via Stop:
+                 8. Click Stop Campaign → confirm.
+                 9. Wait for status = "Expired".
+                 10. Read Delete button isDisabled() — verify isEnabled = true.
+
+                 SC-4 — Negative: Cancel Delete dialog:
+                 11. Click Delete Campaign. Verify "Delete Campaign?" dialog.
+                 12. Verify Cancel and Delete buttons visible.
+                 13. Click Cancel. Verify dialog closes.
+                 14. Verify campaign is still visible in the list.
+                 15. Read status — verify "Expired".
+
+                 SC-5 — Positive: Confirm Delete:
+                 16. Click Delete Campaign again. Verify dialog.
+                 17. Click Delete (confirm). Verify success notification.
+                 18. Navigate to list. Search by campaign name.
+                 19. Verify Results (0) — campaign permanently removed.
+
+Expected Result: Delete disabled for Scheduled (SC-1) and Paused (SC-2).
+                 Delete enabled after Stop (SC-3).
+                 Cancel keeps campaign (SC-4).
+                 Confirm deletes campaign; Results (0) after delete (SC-5).
+
+Actual Result  : All negative and positive delete scenarios behave as expected.
+
+Test Status    : PASS
+--------------------------------------------------------------------------------
+
+
+================================================================================
+                         TEST SUMMARY
+================================================================================
+
+ TC-EL-001  Navigation — Eligibility Tab Visible                         PASS
+ TC-EL-002  Navigation — Tab Navigates to List Page                      PASS
+ TC-EL-003  Navigation — "+ Campaigns" Button Visible                    PASS
+ TC-EL-004  Navigation — Opens Creation Form                             PASS
+ TC-EL-005  Form — All Fields, Buttons, Ruleset Default                  PASS
+ TC-EL-006  Validation — Save & Activate Empty Form (4 errors)           PASS
+ TC-EL-007  Validation — Save as Draft (notification + inline error)     PASS
+ TC-EL-008  Validation — Past Start Date                                 PASS
+ TC-EL-009  Validation — End Date Before Start Date                      PASS
+ TC-EL-010  Form — "No channels selected" Default                        PASS
+ TC-EL-011  Form — Channel Accordion and Add Ruleset Button              PASS
+ TC-EL-012  Form — Separate Ruleset per Channel                          PASS
+ TC-EL-013  Validation — Invalid Campaign ID Format                      PASS
+ TC-EL-014  Channel Removal — Cancel + Confirm (3 SCs)                  PASS
+ TC-EL-015  Full Lifecycle — Ruleset, A/B Testing, Save (6 SCs)          PASS
+ TC-EL-016  Creation — Existing Ruleset + A/B Testing (2 SCs)            PASS
+ TC-EL-017  Ruleset Sub-drawer — Validation Errors                       PASS
+ TC-EL-018  Ruleset Sub-drawer — Requires Name + Start Date (2 SCs)      PASS
+ TC-EL-019  Multi-channel — One Channel Missing Ruleset Blocked          PASS
+ TC-EL-020  Multi-channel — Full Creation with A/B Testing (2 SCs)       PASS
+ TC-EL-021  Multi-channel — No Rulesets Configured Blocked               PASS
+ TC-EL-022  A/B Testing — Save Without and With A/B (2 SCs)              PASS
+ TC-EL-023  Campaign ID Uniqueness — Duplicate Rejected                  PASS
+ TC-EL-024  Manual Ruleset + A/B Testing + Action Buttons (2 SCs)        PASS
+ TC-EL-025  View Details — Campaign Detail Modal (4 SCs)                 PASS
+ TC-EL-026  Edit Campaign — Update Form Pre-filled (4 SCs)               PASS
+ TC-EL-027  Copy Campaign — Form with Cleared Start Date (5 SCs)         PASS
+ TC-EL-028  Share Campaign — Shareable URL Modal (3 SCs)                 PASS
+ TC-EL-029  Pause — Dialog UI + Cancel Preserves Scheduled (4 SCs)       PASS
+ TC-EL-030  Stop — Dialog UI + Cancel Preserves Scheduled (4 SCs)        PASS
+ TC-EL-031  Delete — Disabled for Scheduled Campaigns                    PASS
+ TC-EL-032  Edit Scheduled Campaign — Full Lifecycle (6 SCs)             PASS
+ TC-EL-033  Pause / Resume — Full Lifecycle (6 SCs)                      PASS
+ TC-EL-034  Paused Campaign — Actions (View, Edit, Stop, Delete) (4 SCs) PASS
+ TC-EL-035  Edit Paused Campaign — Full Lifecycle (5 SCs)                PASS
+ TC-EL-036  Stop Scheduled — Expired Lifecycle + Actions (3 SCs)         PASS
+ TC-EL-037  Stop Paused — Expired Lifecycle + Actions (3 SCs)            PASS
+ TC-EL-038  Delete — Negative (Sched/Paused) + Positive (5 SCs)         PASS
+
+--------------------------------------------------------------------------------
+ Total Test Cases    : 26
+ Total Sub-scenarios : 93
+ Passed              : 93
+ Failed              : 0
+ Test Run Duration   : ~8.5 minutes
+================================================================================

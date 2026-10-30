@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npx playwright *)",
+      "PowerShell(npx playwright test tests/copy.spec.ts -g \"TC-CP-MK\")",
+      "PowerShell(npx playwright test tests/copy.spec.ts -g \"TC-CP-MK-007|TC-CP-MK-010\")",
+      "PowerShell(npx playwright test tests/copy.spec.ts -g \"TC-CP-MK-012|TC-CP-MK-013\" --retries=0)",
+      "PowerShell(Select-String -Path \"C:\\\\Users\\\\ilabs QA\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-ilabs-QA-Desktop-Xenia3-ipsy-xenia\\\\3a70e3f8-97c6-4bca-a538-249b8fb7ec86\\\\tasks\\\\b9bwg3w05.output\" -Pattern \"SKIPPED|skipped|passed|failed|flaky\" | Select-Object -Last 20 | ForEach-Object { $_.Line })",
+      "Bash(claude mcp *)",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_click",
+      "Bash(node *)",
+      "mcp__playwright__browser_snapshot",
+      "mcp__playwright__browser_type",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_tabs",
+      "mcp__playwright__browser_press_key",
+      "mcp__playwright__browser_evaluate"
+    ]
+  }
+}

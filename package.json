@@ -1,0 +1,41 @@
+{
+  "name": "ipsy_xenia",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report reports",
+    "test:login": "playwright test tests/auth/login.spec.ts",
+    "test:login:report": "playwright test tests/auth/login.spec.ts && playwright show-report reports/html",
+    "test:dashboard": "playwright test tests/dashboard/dashboard.spec.ts",
+    "test:dashboard:report": "playwright test tests/dashboard/dashboard.spec.ts && playwright show-report reports/html",
+    "test:tables": "playwright test tests/tables/tables.spec.ts",
+    "test:tables:report": "playwright test tests/tables/tables.spec.ts && playwright show-report reports/html",
+    "test:copy": "playwright test tests/gradual-rollout/copy.spec.ts tests/eligibility/copy.spec.ts tests/personalization/copy.spec.ts tests/redirection/copy.spec.ts tests/marketing/copy.spec.ts",
+    "test:copy:headless": "cross-env HEADLESS=true playwright test tests/gradual-rollout/copy.spec.ts tests/eligibility/copy.spec.ts tests/personalization/copy.spec.ts tests/redirection/copy.spec.ts tests/marketing/copy.spec.ts",
+    "test:copy:report": "playwright test tests/gradual-rollout/copy.spec.ts tests/eligibility/copy.spec.ts tests/personalization/copy.spec.ts tests/redirection/copy.spec.ts tests/marketing/copy.spec.ts && playwright show-report reports/html",
+    "test:gradual-rollout": "playwright test tests/gradual-rollout",
+    "test:eligibility": "playwright test tests/eligibility",
+    "test:channel": "playwright test tests/channel",
+    "test:content-testing": "playwright test tests/content-testing",
+    "test:personalization": "playwright test tests/personalization",
+    "test:marketing": "playwright test tests/marketing",
+    "test:redirection": "playwright test tests/redirection/redirection.spec.ts",
+    "test:redirection:headless": "cross-env HEADLESS=true playwright test tests/redirection/redirection.spec.ts",
+    "test:redirection:report": "playwright test tests/redirection/redirection.spec.ts && playwright show-report reports/html",
+    "test:bugfix-verification": "playwright test tests/bugfix-verification",
+    "codegen": "playwright codegen https://be.contentful.com/login"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "cross-env": "^10.1.0",
+    "dotenv": "^16.6.1",
+    "typescript": "^6.0.3"
+  }
+}

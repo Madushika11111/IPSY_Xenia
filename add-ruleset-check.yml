@@ -1,0 +1,1339 @@
+- generic [ref=e19]:
+  - banner [ref=e20]:
+    - link "Skip to main content" [ref=e21] [cursor=pointer]:
+      - /url: "#main-content"
+    - navigation [ref=e23]:
+      - generic [ref=e24]:
+        - link "Navigate to home page" [ref=e25] [cursor=pointer]:
+          - /url: /spaces/x7vqsodnrlg0/environments/master/home
+        - generic "Main Navigation" [ref=e32]:
+          - link "Content model" [ref=e33] [cursor=pointer]:
+            - /url: /spaces/x7vqsodnrlg0/environments/master/content_types
+          - link "Content" [ref=e37] [cursor=pointer]:
+            - /url: /spaces/x7vqsodnrlg0/environments/master/views/entries
+          - link "Media" [ref=e41] [cursor=pointer]:
+            - /url: /spaces/x7vqsodnrlg0/environments/master/views/assets
+          - link "AI & Automations" [ref=e45] [cursor=pointer]:
+            - /url: /spaces/x7vqsodnrlg0/environments/master/ai_automations
+          - button "Apps" [ref=e49] [cursor=pointer]
+      - generic [ref=e55]:
+        - generic "Promotions" [ref=e56]:
+          - button "Upgrade your free plan" [ref=e60] [cursor=pointer]
+        - button "Open side panel" [ref=e68] [cursor=pointer]:
+          - generic [ref=e71]:
+            - generic [ref=e72]: Xenia Version 1 Space
+            - generic [ref=e76]: master
+        - generic [ref=e80]:
+          - generic "Secondary Navigation" [ref=e81]:
+            - button "Press \"/\" to open quick search" [ref=e84] [cursor=pointer]
+            - button "Help menu" [ref=e89] [cursor=pointer]
+            - button "Search docs" [ref=e94] [cursor=pointer]
+            - button "Settings menu" [ref=e99] [cursor=pointer]
+          - generic "Account Navigation" [ref=e102]:
+            - button "Account menu" [ref=e106] [cursor=pointer]
+  - main [ref=e110]:
+    - iframe [active] [ref=e114]:
+      - generic [ref=f6e1]:
+        - generic [ref=f6e3]:
+          - navigation [ref=f6e4]:
+            - generic [ref=f6e5]:
+              - button "Overview" [ref=f6e6] [cursor=pointer]
+              - list [ref=f6e9]:
+                - listitem [ref=f6e10]:
+                  - link "Dashboard" [ref=f6e11] [cursor=pointer]:
+                    - /url: /
+                - listitem [ref=f6e17]:
+                  - link "Advanced search" [ref=f6e18] [cursor=pointer]:
+                    - /url: /search
+                - listitem [ref=f6e24]:
+                  - link "Campaigns calendar" [ref=f6e25] [cursor=pointer]:
+                    - /url: /events
+            - generic [ref=f6e30]:
+              - button "Campaigns" [ref=f6e31] [cursor=pointer]
+              - list [ref=f6e34]:
+                - listitem [ref=f6e35]:
+                  - link "Personalization" [ref=f6e36] [cursor=pointer]:
+                    - /url: /campaigns
+                    - button [ref=f6e43]
+                - listitem [ref=f6e48]:
+                  - link "Content testing" [ref=f6e49] [cursor=pointer]:
+                    - /url: /ab-testing
+                    - button [ref=f6e57]
+                - listitem [ref=f6e62]:
+                  - link "Marketing" [ref=f6e63] [cursor=pointer]:
+                    - /url: /marketing
+                    - button [ref=f6e69]
+                - listitem [ref=f6e74]:
+                  - link "Redirection" [ref=f6e75] [cursor=pointer]:
+                    - /url: /redirection
+                    - button [ref=f6e81]
+                - listitem [ref=f6e86]:
+                  - link "Gradual rollout" [ref=f6e87] [cursor=pointer]:
+                    - /url: /gradual-rollout
+                    - button [ref=f6e93]
+                - listitem [ref=f6e98]:
+                  - link "Eligibility" [ref=f6e99] [cursor=pointer]:
+                    - /url: /eligibility
+                    - button [ref=f6e106]
+            - generic [ref=f6e111]:
+              - button "Templates" [ref=f6e112] [cursor=pointer]
+              - list:
+                - listitem [ref=f6e116]:
+                  - link "Rule sets" [ref=f6e117] [cursor=pointer]:
+                    - /url: /rule-sets
+                - listitem [ref=f6e121]:
+                  - link "Rules" [ref=f6e122] [cursor=pointer]:
+                    - /url: /rules
+            - generic [ref=f6e130]:
+              - button "Configuration" [ref=f6e131] [cursor=pointer]
+              - list:
+                - listitem [ref=f6e135]:
+                  - link "Tables" [ref=f6e136] [cursor=pointer]:
+                    - /url: /tables
+                - listitem [ref=f6e141]:
+                  - link "Attributes" [ref=f6e142] [cursor=pointer]:
+                    - /url: /attributes
+                - listitem [ref=f6e148]:
+                  - link "Channels" [ref=f6e149] [cursor=pointer]:
+                    - /url: /channels
+            - generic [ref=f6e154]:
+              - button "Migrations" [ref=f6e155] [cursor=pointer]
+              - list [ref=f6e158]:
+                - listitem [ref=f6e159]:
+                  - link "Migration requests 08" [ref=f6e193] [cursor=pointer]:
+                    - /url: /migration-requests
+                    - generic [ref=f6e167]: Migration requests
+                    - generic [ref=f6e194]: "08"
+            - generic [ref=f6e168]:
+              - button "Admin Settings" [ref=f6e169] [cursor=pointer]
+              - list:
+                - listitem [ref=f6e173]:
+                  - link "Roles & permissions" [ref=f6e174] [cursor=pointer]:
+                    - /url: /roles-and-permissions
+                - listitem [ref=f6e182]:
+                  - link "Organization config" [ref=f6e183] [cursor=pointer]:
+                    - /url: /organization-config
+          - generic [ref=f6e195]:
+            - generic [ref=f6e196]:
+              - generic [ref=f6e197]:
+                - heading "Redirection campaigns" [level=1] [ref=f6e198]
+                - paragraph [ref=f6e199]: 56 Campaigns
+              - button "Campaigns" [ref=f6e200] [cursor=pointer]
+            - generic [ref=f6e202]:
+              - generic [ref=f6e203]:
+                - generic [ref=f6e204]: Search by name
+                - textbox "Enter campaign name" [ref=f6e206]
+              - generic [ref=f6e207]:
+                - generic [ref=f6e208]: Status
+                - button "All statuses" [ref=f6e210] [cursor=pointer]
+              - generic [ref=f6e214]:
+                - generic [ref=f6e215]: Date
+                - combobox [ref=f6e217] [cursor=pointer]:
+                  - generic: All days
+              - button "Search" [ref=f6e220] [cursor=pointer]
+              - button "Reset" [ref=f6e221] [cursor=pointer]
+            - heading "Results (56)" [level=2] [ref=f6e223]:
+              - text: Results
+              - generic [ref=f6e224]: (56)
+            - generic [ref=f6e226]:
+              - table [ref=f6e228]:
+                - rowgroup [ref=f6e229]:
+                  - row [ref=f6e230]:
+                    - columnheader "#" [ref=f6e231]
+                    - columnheader [ref=f6e232]:
+                      - checkbox "Select all redirection campaigns" [ref=f6e234] [cursor=pointer]
+                    - columnheader "Name" [ref=f6e235]
+                    - columnheader "Start date & time (PST)" [ref=f6e236]
+                    - columnheader "End date & time (PST)" [ref=f6e237]
+                    - columnheader "Channels" [ref=f6e238]
+                    - columnheader "Status" [ref=f6e239]
+                    - columnheader "Actions" [ref=f6e240]
+                - rowgroup [ref=f6e241]:
+                  - row [ref=f6e242]:
+                    - cell [ref=f6e243]:
+                      - generic "Draft campaigns cannot be reordered" [ref=f6e244]
+                    - cell [ref=f6e252]:
+                      - checkbox "Select campaign MIR_Retest11_draft" [disabled] [ref=f6e254]
+                    - cell "MIR_Retest11_draft" [ref=f6e255]:
+                      - generic "MIR_Retest11_draft" [ref=f6e257]
+                    - cell "2026-08-14 02:33 AM" [ref=f6e258]
+                    - cell "N/A" [ref=f6e259]
+                    - cell "GR_channel_2" [ref=f6e260]
+                    - cell "Draft" [ref=f6e263]
+                    - cell [ref=f6e266]:
+                      - generic [ref=f6e267]:
+                        - button "Share Campaign" [ref=f6e268] [cursor=pointer]
+                        - button "View Details" [disabled]
+                        - button "Edit Campaign" [ref=f6e269] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e270] [cursor=pointer]
+                        - button "Pause Campaign" [disabled]
+                        - button "Stop Campaign" [disabled]
+                        - button "Delete Campaign" [ref=f6e271] [cursor=pointer]
+                  - row [ref=f6e272]:
+                    - cell [ref=f6e273]:
+                      - generic "Draft campaigns cannot be reordered" [ref=f6e274]
+                    - cell [ref=f6e282]:
+                      - checkbox "Select campaign D_R_1" [disabled] [ref=f6e284]
+                    - cell "D_R_1" [ref=f6e285]:
+                      - generic "D_R_1" [ref=f6e287]
+                    - cell "2026-07-22 09:22 PM" [ref=f6e288]
+                    - cell "N/A" [ref=f6e289]
+                    - cell "email" [ref=f6e290]
+                    - cell "Draft" [ref=f6e293]
+                    - cell [ref=f6e296]:
+                      - generic [ref=f6e297]:
+                        - button "Share Campaign" [ref=f6e298] [cursor=pointer]
+                        - button "View Details" [disabled]
+                        - button "Edit Campaign" [ref=f6e299] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e300] [cursor=pointer]
+                        - button "Pause Campaign" [disabled]
+                        - button "Stop Campaign" [disabled]
+                        - button "Delete Campaign" [ref=f6e301] [cursor=pointer]
+                  - row [ref=f6e302]:
+                    - cell [ref=f6e303]:
+                      - button [ref=f6e304]
+                    - cell [ref=f6e312]:
+                      - checkbox "Select campaign TEST_1" [ref=f6e314] [cursor=pointer]
+                    - cell "TEST_1" [ref=f6e315]:
+                      - generic "TEST_1" [ref=f6e317]
+                    - cell "2026-07-16 10:40 PM" [ref=f6e318]
+                    - cell "N/A" [ref=f6e319]
+                    - cell "email" [ref=f6e320]
+                    - cell "Live" [ref=f6e323]
+                    - cell [ref=f6e326]:
+                      - generic [ref=f6e327]:
+                        - button "Share Campaign" [ref=f6e328] [cursor=pointer]
+                        - button "View Details" [ref=f6e329] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e330] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e331] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e332] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e333] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e334]:
+                    - cell [ref=f6e335]:
+                      - button [ref=f6e336]
+                    - cell [ref=f6e344]:
+                      - checkbox "Select campaign R_T2" [ref=f6e346] [cursor=pointer]
+                    - cell "R_T2" [ref=f6e347]:
+                      - generic "R_T2" [ref=f6e349]
+                    - cell "2026-07-18 04:12 AM" [ref=f6e350]
+                    - cell "N/A" [ref=f6e351]
+                    - cell "p13_n_1" [ref=f6e352]
+                    - cell "Live" [ref=f6e355]
+                    - cell [ref=f6e358]:
+                      - generic [ref=f6e359]:
+                        - button "Share Campaign" [ref=f6e360] [cursor=pointer]
+                        - button "View Details" [ref=f6e361] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e362] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e363] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e364] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e365] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e366]:
+                    - cell [ref=f6e367]:
+                      - button [ref=f6e368]
+                    - cell [ref=f6e376]:
+                      - checkbox "Select campaign R_T2_D" [disabled] [ref=f6e378]
+                    - cell "R_T2_D" [ref=f6e379]:
+                      - generic "R_T2_D" [ref=f6e381]
+                    - cell "2026-07-18 04:13 AM" [ref=f6e382]
+                    - cell "2026-07-24 10:21 PM" [ref=f6e383]
+                    - cell "p13_n_1" [ref=f6e384]
+                    - cell "Expired" [ref=f6e387]
+                    - cell [ref=f6e390]:
+                      - generic [ref=f6e391]:
+                        - button "Share Campaign" [ref=f6e392] [cursor=pointer]
+                        - button "View Details" [ref=f6e393] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e394] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e395] [cursor=pointer]
+                        - button "Pause Campaign" [disabled]
+                        - button "Stop Campaign" [disabled]
+                        - button "Delete Campaign" [ref=f6e396] [cursor=pointer]
+                  - row [ref=f6e397]:
+                    - cell [ref=f6e398]:
+                      - button [ref=f6e399]
+                    - cell [ref=f6e407]:
+                      - checkbox "Select campaign RE_Schedule1" [ref=f6e409] [cursor=pointer]
+                    - cell "RE_Schedule1" [ref=f6e410]:
+                      - generic "RE_Schedule1" [ref=f6e412]
+                    - cell "2026-07-20 10:41 PM" [ref=f6e413]
+                    - cell "N/A" [ref=f6e414]
+                    - cell "p13_n_1" [ref=f6e415]
+                    - cell "Paused" [ref=f6e418]
+                    - cell [ref=f6e421]:
+                      - generic [ref=f6e422]:
+                        - button "Share Campaign" [ref=f6e423] [cursor=pointer]
+                        - button "View Details" [ref=f6e424] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e425] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e426] [cursor=pointer]
+                        - button "Resume Campaign" [ref=f6e427] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e428] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e429]:
+                    - cell [ref=f6e430]:
+                      - button [ref=f6e431]
+                    - cell [ref=f6e439]:
+                      - checkbox "Select campaign Redi_schedule1" [ref=f6e441] [cursor=pointer]
+                    - cell "Redi_schedule1" [ref=f6e442]:
+                      - generic "Redi_schedule1" [ref=f6e444]
+                    - cell "2026-07-20 10:54 PM" [ref=f6e445]
+                    - cell "N/A" [ref=f6e446]
+                    - cell "new GR_1" [ref=f6e447]
+                    - cell "Paused" [ref=f6e450]
+                    - cell [ref=f6e453]:
+                      - generic [ref=f6e454]:
+                        - button "Share Campaign" [ref=f6e455] [cursor=pointer]
+                        - button "View Details" [ref=f6e456] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e457] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e458] [cursor=pointer]
+                        - button "Resume Campaign" [ref=f6e459] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e460] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e461]:
+                    - cell [ref=f6e462]:
+                      - button [ref=f6e463]
+                    - cell [ref=f6e471]:
+                      - checkbox "Select campaign testing" [ref=f6e473] [cursor=pointer]
+                    - cell "testing" [ref=f6e474]:
+                      - generic "testing" [ref=f6e476]
+                    - cell "2026-07-20 09:02 PM" [ref=f6e477]
+                    - cell "N/A" [ref=f6e478]
+                    - cell "web" [ref=f6e479]
+                    - cell "Paused" [ref=f6e482]
+                    - cell [ref=f6e485]:
+                      - generic [ref=f6e486]:
+                        - button "Share Campaign" [ref=f6e487] [cursor=pointer]
+                        - button "View Details" [ref=f6e488] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e489] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e490] [cursor=pointer]
+                        - button "Resume Campaign" [ref=f6e491] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e492] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e493]:
+                    - cell [ref=f6e494]:
+                      - button [ref=f6e495]
+                    - cell [ref=f6e503]:
+                      - checkbox "Select campaign RE_S" [disabled] [ref=f6e505]
+                    - cell "RE_S" [ref=f6e506]:
+                      - generic "RE_S" [ref=f6e508]
+                    - cell "2026-07-20 11:24 AM" [ref=f6e509]
+                    - cell "N/A" [ref=f6e510]
+                    - cell "new GR_1" [ref=f6e511]
+                    - cell "Expired" [ref=f6e514]
+                    - cell [ref=f6e517]:
+                      - generic [ref=f6e518]:
+                        - button "Share Campaign" [ref=f6e519] [cursor=pointer]
+                        - button "View Details" [ref=f6e520] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e521] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e522] [cursor=pointer]
+                        - button "Pause Campaign" [disabled]
+                        - button "Stop Campaign" [disabled]
+                        - button "Delete Campaign" [ref=f6e523] [cursor=pointer]
+                  - row [ref=f6e524]:
+                    - cell [ref=f6e525]:
+                      - button [ref=f6e526]
+                    - cell [ref=f6e534]:
+                      - checkbox "Select campaign testing" [ref=f6e536] [cursor=pointer]
+                    - cell "testing" [ref=f6e537]:
+                      - generic "testing" [ref=f6e539]
+                    - cell "2026-08-25 11:55 AM" [ref=f6e540]
+                    - cell "N/A" [ref=f6e541]
+                    - cell "email" [ref=f6e542]
+                    - cell "Live" [ref=f6e545]
+                    - cell [ref=f6e548]:
+                      - generic [ref=f6e549]:
+                        - button "Share Campaign" [ref=f6e550] [cursor=pointer]
+                        - button "View Details" [ref=f6e551] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e552] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e553] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e554] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e555] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e556]:
+                    - cell [ref=f6e557]:
+                      - button [ref=f6e558]
+                    - cell [ref=f6e566]:
+                      - checkbox "Select campaign SCHEDUED_1" [ref=f6e568] [cursor=pointer]
+                    - cell "SCHEDUED_1" [ref=f6e569]:
+                      - generic "SCHEDUED_1" [ref=f6e571]
+                    - cell "2026-07-28 01:11 PM" [ref=f6e572]
+                    - cell "N/A" [ref=f6e573]
+                    - cell "email" [ref=f6e574]
+                    - cell "Live" [ref=f6e577]
+                    - cell [ref=f6e580]:
+                      - generic [ref=f6e581]:
+                        - button "Share Campaign" [ref=f6e582] [cursor=pointer]
+                        - button "View Details" [ref=f6e583] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e584] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e585] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e586] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e587] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e588]:
+                    - cell [ref=f6e589]:
+                      - button [ref=f6e590]
+                    - cell [ref=f6e598]:
+                      - checkbox "Select campaign T_RE1" [ref=f6e600] [cursor=pointer]
+                    - cell "T_RE1" [ref=f6e601]:
+                      - generic "T_RE1" [ref=f6e603]
+                    - cell "2026-07-21 12:56 AM" [ref=f6e604]
+                    - cell "N/A" [ref=f6e605]
+                    - cell "GR_channel_2" [ref=f6e606]
+                    - cell "Paused" [ref=f6e609]
+                    - cell [ref=f6e612]:
+                      - generic [ref=f6e613]:
+                        - button "Share Campaign" [ref=f6e614] [cursor=pointer]
+                        - button "View Details" [ref=f6e615] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e616] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e617] [cursor=pointer]
+                        - button "Resume Campaign" [ref=f6e618] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e619] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e620]:
+                    - cell [ref=f6e621]:
+                      - button [ref=f6e622]
+                    - cell [ref=f6e630]:
+                      - checkbox "Select campaign RSCH_1" [disabled] [ref=f6e632]
+                    - cell "RSCH_1" [ref=f6e633]:
+                      - generic "RSCH_1" [ref=f6e635]
+                    - cell "2026-07-22 12:00 AM" [ref=f6e636]
+                    - cell "2026-07-30 12:59 AM" [ref=f6e637]
+                    - cell "email" [ref=f6e638]
+                    - cell "Expired" [ref=f6e641]
+                    - cell [ref=f6e644]:
+                      - generic [ref=f6e645]:
+                        - button "Share Campaign" [ref=f6e646] [cursor=pointer]
+                        - button "View Details" [ref=f6e647] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e648] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e649] [cursor=pointer]
+                        - button "Pause Campaign" [disabled]
+                        - button "Stop Campaign" [disabled]
+                        - button "Delete Campaign" [ref=f6e650] [cursor=pointer]
+                  - row [ref=f6e651]:
+                    - cell [ref=f6e652]:
+                      - button [ref=f6e653]
+                    - cell [ref=f6e661]:
+                      - checkbox "Select campaign R_Test_1" [disabled] [ref=f6e663]
+                    - cell "R_Test_1" [ref=f6e664]:
+                      - generic "R_Test_1" [ref=f6e666]
+                    - cell "2026-07-22 09:02 PM" [ref=f6e667]
+                    - cell "2026-07-31 09:03 PM" [ref=f6e668]
+                    - cell "web" [ref=f6e669]
+                    - cell "Expired" [ref=f6e672]
+                    - cell [ref=f6e675]:
+                      - generic [ref=f6e676]:
+                        - button "Share Campaign" [ref=f6e677] [cursor=pointer]
+                        - button "View Details" [ref=f6e678] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e679] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e680] [cursor=pointer]
+                        - button "Pause Campaign" [disabled]
+                        - button "Stop Campaign" [disabled]
+                        - button "Delete Campaign" [ref=f6e681] [cursor=pointer]
+                  - row [ref=f6e682]:
+                    - cell [ref=f6e683]:
+                      - button [ref=f6e684]
+                    - cell [ref=f6e692]:
+                      - checkbox "Select campaign R_Test_1_Duplicate1" [ref=f6e694] [cursor=pointer]
+                    - cell "R_Test_1_Duplicate1" [ref=f6e695]:
+                      - generic "R_Test_1_Duplicate1" [ref=f6e697]
+                    - cell "2026-07-22 09:03 PM" [ref=f6e698]
+                    - cell "N/A" [ref=f6e699]
+                    - cell "web, email" [ref=f6e700]:
+                      - generic [ref=f6e701]:
+                        - generic [ref=f6e702]: web,
+                        - generic [ref=f6e703]: email
+                    - cell "Paused" [ref=f6e704]
+                    - cell [ref=f6e707]:
+                      - generic [ref=f6e708]:
+                        - button "Share Campaign" [ref=f6e709] [cursor=pointer]
+                        - button "View Details" [ref=f6e710] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e711] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e712] [cursor=pointer]
+                        - button "Resume Campaign" [ref=f6e713] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e714] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e715]:
+                    - cell [ref=f6e716]:
+                      - button [ref=f6e717]
+                    - cell [ref=f6e725]:
+                      - checkbox "Select campaign Draft_RE_Test1" [ref=f6e727] [cursor=pointer]
+                    - cell "Draft_RE_Test1" [ref=f6e728]:
+                      - generic "Draft_RE_Test1" [ref=f6e730]
+                    - cell "2026-07-23 02:55 AM" [ref=f6e731]
+                    - cell "N/A" [ref=f6e732]
+                    - cell "web" [ref=f6e733]
+                    - cell "Paused" [ref=f6e736]
+                    - cell [ref=f6e739]:
+                      - generic [ref=f6e740]:
+                        - button "Share Campaign" [ref=f6e741] [cursor=pointer]
+                        - button "View Details" [ref=f6e742] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e743] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e744] [cursor=pointer]
+                        - button "Resume Campaign" [ref=f6e745] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e746] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e747]:
+                    - cell [ref=f6e748]:
+                      - button [ref=f6e749]
+                    - cell [ref=f6e757]:
+                      - 'checkbox "Select campaign D_R_1_D`" [ref=f6e759] [cursor=pointer]'
+                    - 'cell "D_R_1_D`" [ref=f6e760]':
+                      - 'generic "D_R_1_D`" [ref=f6e762]'
+                    - cell "2026-07-23 09:24 PM" [ref=f6e763]
+                    - cell "N/A" [ref=f6e764]
+                    - cell "email" [ref=f6e765]
+                    - cell "Live" [ref=f6e768]
+                    - cell [ref=f6e771]:
+                      - generic [ref=f6e772]:
+                        - button "Share Campaign" [ref=f6e773] [cursor=pointer]
+                        - button "View Details" [ref=f6e774] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e775] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e776] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e777] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e778] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e779]:
+                    - cell [ref=f6e780]:
+                      - button [ref=f6e781]
+                    - cell [ref=f6e789]:
+                      - checkbox "Select campaign D_R_1_D2" [ref=f6e791] [cursor=pointer]
+                    - cell "D_R_1_D2" [ref=f6e792]:
+                      - generic "D_R_1_D2" [ref=f6e794]
+                    - cell "2026-07-28 09:25 PM" [ref=f6e795]
+                    - cell "N/A" [ref=f6e796]
+                    - cell "email" [ref=f6e797]
+                    - cell "Paused" [ref=f6e800]
+                    - cell [ref=f6e803]:
+                      - generic [ref=f6e804]:
+                        - button "Share Campaign" [ref=f6e805] [cursor=pointer]
+                        - button "View Details" [ref=f6e806] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e807] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e808] [cursor=pointer]
+                        - button "Resume Campaign" [ref=f6e809] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e810] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e811]:
+                    - cell [ref=f6e812]:
+                      - button [ref=f6e813]
+                    - cell [ref=f6e821]:
+                      - checkbox "Select campaign date test" [ref=f6e823] [cursor=pointer]
+                    - cell "date test" [ref=f6e824]:
+                      - generic "date test" [ref=f6e826]
+                    - cell "2026-08-01 12:31 AM" [ref=f6e827]
+                    - cell "2026-09-04 12:40 AM" [ref=f6e828]
+                    - cell "email" [ref=f6e829]
+                    - cell "Live" [ref=f6e832]
+                    - cell [ref=f6e835]:
+                      - generic [ref=f6e836]:
+                        - button "Share Campaign" [ref=f6e837] [cursor=pointer]
+                        - button "View Details" [ref=f6e838] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e839] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e840] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e841] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e842] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e843]:
+                    - cell [ref=f6e844]:
+                      - button [ref=f6e845]
+                    - cell [ref=f6e853]:
+                      - checkbox "Select campaign RE_Retest_1" [ref=f6e855] [cursor=pointer]
+                    - cell "RE_Retest_1" [ref=f6e856]:
+                      - generic "RE_Retest_1" [ref=f6e858]
+                    - cell "2026-08-02 11:19 PM" [ref=f6e859]
+                    - cell "2026-09-05 11:27 PM" [ref=f6e860]
+                    - cell "web" [ref=f6e861]
+                    - cell "Live" [ref=f6e864]
+                    - cell [ref=f6e867]:
+                      - generic [ref=f6e868]:
+                        - button "Share Campaign" [ref=f6e869] [cursor=pointer]
+                        - button "View Details" [ref=f6e870] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e871] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e872] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e873] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e874] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e875]:
+                    - cell [ref=f6e876]:
+                      - button [ref=f6e877]
+                    - cell [ref=f6e885]:
+                      - checkbox "Select campaign RE_Retest_1_duplicate" [disabled] [ref=f6e887]
+                    - cell "RE_Retest_1_duplicate" [ref=f6e888]:
+                      - generic "RE_Retest_1_duplicate" [ref=f6e890]
+                    - cell "2026-08-04 11:30 PM" [ref=f6e891]
+                    - cell "2026-08-19 12:04 AM" [ref=f6e892]
+                    - cell "web" [ref=f6e893]
+                    - cell "Expired" [ref=f6e896]
+                    - cell [ref=f6e899]:
+                      - generic [ref=f6e900]:
+                        - button "Share Campaign" [ref=f6e901] [cursor=pointer]
+                        - button "View Details" [ref=f6e902] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e903] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e904] [cursor=pointer]
+                        - button "Pause Campaign" [disabled]
+                        - button "Stop Campaign" [disabled]
+                        - button "Delete Campaign" [ref=f6e905] [cursor=pointer]
+                  - row [ref=f6e906]:
+                    - cell [ref=f6e907]:
+                      - button [ref=f6e908]
+                    - cell [ref=f6e916]:
+                      - checkbox "Select campaign Redirection_retest_2" [ref=f6e918] [cursor=pointer]
+                    - cell "Redirection_retest_2" [ref=f6e919]:
+                      - generic "Redirection_retest_2" [ref=f6e921]
+                    - cell "2026-08-05 03:20 AM" [ref=f6e922]
+                    - cell "N/A" [ref=f6e923]
+                    - cell "Redirection_channel_1" [ref=f6e924]
+                    - cell "Live" [ref=f6e927]
+                    - cell [ref=f6e930]:
+                      - generic [ref=f6e931]:
+                        - button "Share Campaign" [ref=f6e932] [cursor=pointer]
+                        - button "View Details" [ref=f6e933] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e934] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e935] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e936] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e937] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e938]:
+                    - cell [ref=f6e939]:
+                      - button [ref=f6e940]
+                    - cell [ref=f6e948]:
+                      - checkbox "Select campaign Redirection_retest_2_Duplicate" [ref=f6e950] [cursor=pointer]
+                    - cell "Redirection_retest_2_Duplicate" [ref=f6e951]:
+                      - generic "Redirection_retest_2_Duplicate" [ref=f6e953]
+                    - cell "2026-08-04 03:29 AM" [ref=f6e954]
+                    - cell "N/A" [ref=f6e955]
+                    - cell "Redirection_channel_1" [ref=f6e956]
+                    - cell "Paused" [ref=f6e959]
+                    - cell [ref=f6e962]:
+                      - generic [ref=f6e963]:
+                        - button "Share Campaign" [ref=f6e964] [cursor=pointer]
+                        - button "View Details" [ref=f6e965] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e966] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e967] [cursor=pointer]
+                        - button "Resume Campaign" [ref=f6e968] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e969] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e970]:
+                    - cell [ref=f6e971]:
+                      - button [ref=f6e972]
+                    - cell [ref=f6e980]:
+                      - checkbox "Select campaign Re test_date time1" [ref=f6e982] [cursor=pointer]
+                    - cell "Re test_date time1" [ref=f6e983]:
+                      - generic "Re test_date time1" [ref=f6e985]
+                    - cell "2026-08-03 04:34 AM" [ref=f6e986]
+                    - cell "2026-08-26 04:42 AM" [ref=f6e987]
+                    - cell "email" [ref=f6e988]
+                    - cell "Paused" [ref=f6e991]
+                    - cell [ref=f6e994]:
+                      - generic [ref=f6e995]:
+                        - button "Share Campaign" [ref=f6e996] [cursor=pointer]
+                        - button "View Details" [ref=f6e997] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e998] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e999] [cursor=pointer]
+                        - button "Resume Campaign" [ref=f6e1000] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1001] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1002]:
+                    - cell [ref=f6e1003]:
+                      - button [ref=f6e1004]
+                    - cell [ref=f6e1012]:
+                      - checkbox "Select campaign Re test_date time2" [ref=f6e1014] [cursor=pointer]
+                    - cell "Re test_date time2" [ref=f6e1015]:
+                      - generic "Re test_date time2" [ref=f6e1017]
+                    - cell "2026-08-04 04:34 AM" [ref=f6e1018]
+                    - cell "N/A" [ref=f6e1019]
+                    - cell "email" [ref=f6e1020]
+                    - cell "Paused" [ref=f6e1023]
+                    - cell [ref=f6e1026]:
+                      - generic [ref=f6e1027]:
+                        - button "Share Campaign" [ref=f6e1028] [cursor=pointer]
+                        - button "View Details" [ref=f6e1029] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1030] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1031] [cursor=pointer]
+                        - button "Resume Campaign" [ref=f6e1032] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1033] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1034]:
+                    - cell [ref=f6e1035]:
+                      - button [ref=f6e1036]
+                    - cell [ref=f6e1044]:
+                      - checkbox "Select campaign new date between" [ref=f6e1046] [cursor=pointer]
+                    - cell "new date between" [ref=f6e1047]:
+                      - generic "new date between" [ref=f6e1049]
+                    - cell "2026-08-05 08:12 PM" [ref=f6e1050]
+                    - cell "N/A" [ref=f6e1051]
+                    - cell "new GR_1" [ref=f6e1052]
+                    - cell "Live" [ref=f6e1055]
+                    - cell [ref=f6e1058]:
+                      - generic [ref=f6e1059]:
+                        - button "Share Campaign" [ref=f6e1060] [cursor=pointer]
+                        - button "View Details" [ref=f6e1061] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1062] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1063] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1064] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1065] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1066]:
+                    - cell [ref=f6e1067]:
+                      - button [ref=f6e1068]
+                    - cell [ref=f6e1076]:
+                      - checkbox "Select campaign Migrate redirection_1" [disabled] [ref=f6e1078]
+                    - cell "Migrate redirection_1" [ref=f6e1079]:
+                      - generic "Migrate redirection_1" [ref=f6e1081]
+                    - cell "2026-08-07 07:52 PM" [ref=f6e1082]
+                    - cell "2026-08-11 07:55 PM" [ref=f6e1083]
+                    - cell "email" [ref=f6e1084]
+                    - cell "Expired" [ref=f6e1087]
+                    - cell [ref=f6e1090]:
+                      - generic [ref=f6e1091]:
+                        - button "Share Campaign" [ref=f6e1092] [cursor=pointer]
+                        - button "View Details" [ref=f6e1093] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1094] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1095] [cursor=pointer]
+                        - button "Pause Campaign" [disabled]
+                        - button "Stop Campaign" [disabled]
+                        - button "Delete Campaign" [ref=f6e1096] [cursor=pointer]
+                  - row [ref=f6e1097]:
+                    - cell [ref=f6e1098]:
+                      - button [ref=f6e1099]
+                    - cell [ref=f6e1107]:
+                      - checkbox "Select campaign re test draft migration" [ref=f6e1109] [cursor=pointer]
+                    - cell "re test draft migration" [ref=f6e1110]:
+                      - generic "re test draft migration" [ref=f6e1112]
+                    - cell "2026-08-06 09:22 PM" [ref=f6e1113]
+                    - cell "N/A" [ref=f6e1114]
+                    - cell "email" [ref=f6e1115]
+                    - cell "Live" [ref=f6e1118]
+                    - cell [ref=f6e1121]:
+                      - generic [ref=f6e1122]:
+                        - button "Share Campaign" [ref=f6e1123] [cursor=pointer]
+                        - button "View Details" [ref=f6e1124] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1125] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1126] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1127] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1128] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1129]:
+                    - cell [ref=f6e1130]:
+                      - button [ref=f6e1131]
+                    - cell [ref=f6e1139]:
+                      - checkbox "Select campaign migrate 2" [ref=f6e1141] [cursor=pointer]
+                    - cell "migrate 2" [ref=f6e1142]:
+                      - generic "migrate 2" [ref=f6e1144]
+                    - cell "2026-08-06 10:16 PM" [ref=f6e1145]
+                    - cell "N/A" [ref=f6e1146]
+                    - cell "email" [ref=f6e1147]
+                    - cell "Live" [ref=f6e1150]
+                    - cell [ref=f6e1153]:
+                      - generic [ref=f6e1154]:
+                        - button "Share Campaign" [ref=f6e1155] [cursor=pointer]
+                        - button "View Details" [ref=f6e1156] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1157] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1158] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1159] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1160] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1161]:
+                    - cell [ref=f6e1162]:
+                      - button [ref=f6e1163]
+                    - cell [ref=f6e1171]:
+                      - checkbox "Select campaign draft test 3" [ref=f6e1173] [cursor=pointer]
+                    - cell "draft test 3" [ref=f6e1174]:
+                      - generic "draft test 3" [ref=f6e1176]
+                    - cell "2026-08-07 01:57 AM" [ref=f6e1177]
+                    - cell "2026-08-26 02:15 AM" [ref=f6e1178]
+                    - cell "p13_n_1" [ref=f6e1179]
+                    - cell "Live" [ref=f6e1182]
+                    - cell [ref=f6e1185]:
+                      - generic [ref=f6e1186]:
+                        - button "Share Campaign" [ref=f6e1187] [cursor=pointer]
+                        - button "View Details" [ref=f6e1188] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1189] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1190] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1191] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1192] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1193]:
+                    - cell [ref=f6e1194]:
+                      - button [ref=f6e1195]
+                    - cell [ref=f6e1203]:
+                      - checkbox "Select campaign new redirection_re draft" [ref=f6e1205] [cursor=pointer]
+                    - cell "new redirection_re draft" [ref=f6e1206]:
+                      - generic "new redirection_re draft" [ref=f6e1208]
+                    - cell "2026-08-07 09:13 PM" [ref=f6e1209]
+                    - cell "2026-09-01 09:16 PM" [ref=f6e1210]
+                    - cell "email" [ref=f6e1211]
+                    - cell "Live" [ref=f6e1214]
+                    - cell [ref=f6e1217]:
+                      - generic [ref=f6e1218]:
+                        - button "Share Campaign" [ref=f6e1219] [cursor=pointer]
+                        - button "View Details" [ref=f6e1220] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1221] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1222] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1223] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1224] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1225]:
+                    - cell [ref=f6e1226]:
+                      - button [ref=f6e1227]
+                    - cell [ref=f6e1235]:
+                      - checkbox "Select campaign Mig_redirection_1" [disabled] [ref=f6e1237]
+                    - cell "Mig_redirection_1" [ref=f6e1238]:
+                      - generic "Mig_redirection_1" [ref=f6e1240]
+                    - cell "2026-08-10 08:43 PM" [ref=f6e1241]
+                    - cell "2026-08-20 09:42 PM" [ref=f6e1242]
+                    - cell "email" [ref=f6e1243]
+                    - cell "Expired" [ref=f6e1246]
+                    - cell [ref=f6e1249]:
+                      - generic [ref=f6e1250]:
+                        - button "Share Campaign" [ref=f6e1251] [cursor=pointer]
+                        - button "View Details" [ref=f6e1252] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1253] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1254] [cursor=pointer]
+                        - button "Pause Campaign" [disabled]
+                        - button "Stop Campaign" [disabled]
+                        - button "Delete Campaign" [ref=f6e1255] [cursor=pointer]
+                  - row [ref=f6e1256]:
+                    - cell [ref=f6e1257]:
+                      - button [ref=f6e1258]
+                    - cell [ref=f6e1266]:
+                      - checkbox "Select campaign ID_Test_1" [ref=f6e1268] [cursor=pointer]
+                    - cell "ID_Test_1" [ref=f6e1269]:
+                      - generic "ID_Test_1" [ref=f6e1271]
+                    - cell "2026-08-12 04:09 AM" [ref=f6e1272]
+                    - cell "N/A" [ref=f6e1273]
+                    - cell "p13_n_1" [ref=f6e1274]
+                    - cell "Live" [ref=f6e1277]
+                    - cell [ref=f6e1280]:
+                      - generic [ref=f6e1281]:
+                        - button "Share Campaign" [ref=f6e1282] [cursor=pointer]
+                        - button "View Details" [ref=f6e1283] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1284] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1285] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1286] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1287] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1288]:
+                    - cell [ref=f6e1289]:
+                      - button [ref=f6e1290]
+                    - cell [ref=f6e1298]:
+                      - checkbox "Select campaign MIR_Retest11" [ref=f6e1300] [cursor=pointer]
+                    - cell "MIR_Retest11" [ref=f6e1301]:
+                      - generic "MIR_Retest11" [ref=f6e1303]
+                    - cell "2026-08-15 01:11 AM" [ref=f6e1304]
+                    - cell "N/A" [ref=f6e1305]
+                    - cell "GR_channel_2" [ref=f6e1306]
+                    - cell "Live" [ref=f6e1309]
+                    - cell [ref=f6e1312]:
+                      - generic [ref=f6e1313]:
+                        - button "Share Campaign" [ref=f6e1314] [cursor=pointer]
+                        - button "View Details" [ref=f6e1315] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1316] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1317] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1318] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1319] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1320]:
+                    - cell [ref=f6e1321]:
+                      - button [ref=f6e1322]
+                    - cell [ref=f6e1330]:
+                      - checkbox "Select campaign Redirection_draft test_001" [ref=f6e1332] [cursor=pointer]
+                    - cell "Redirection_draft test_001" [ref=f6e1333]:
+                      - generic "Redirection_draft test_001" [ref=f6e1335]
+                    - cell "2026-08-12 02:47 AM" [ref=f6e1336]
+                    - cell "N/A" [ref=f6e1337]
+                    - cell "new GR_1" [ref=f6e1338]
+                    - cell "Live" [ref=f6e1341]
+                    - cell [ref=f6e1344]:
+                      - generic [ref=f6e1345]:
+                        - button "Share Campaign" [ref=f6e1346] [cursor=pointer]
+                        - button "View Details" [ref=f6e1347] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1348] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1349] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1350] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1351] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1352]:
+                    - cell [ref=f6e1353]:
+                      - button [ref=f6e1354]
+                    - cell [ref=f6e1362]:
+                      - checkbox "Select campaign shanuka migration test" [ref=f6e1364] [cursor=pointer]
+                    - cell "shanuka migration test" [ref=f6e1365]:
+                      - generic "shanuka migration test" [ref=f6e1367]
+                    - cell "2026-08-12 04:45 PM" [ref=f6e1368]
+                    - cell "N/A" [ref=f6e1369]
+                    - cell "email" [ref=f6e1370]
+                    - cell "Live" [ref=f6e1373]
+                    - cell [ref=f6e1376]:
+                      - generic [ref=f6e1377]:
+                        - button "Share Campaign" [ref=f6e1378] [cursor=pointer]
+                        - button "View Details" [ref=f6e1379] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1380] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1381] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1382] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1383] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1384]:
+                    - cell [ref=f6e1385]:
+                      - button [ref=f6e1386]
+                    - cell [ref=f6e1394]:
+                      - checkbox "Select campaign RE_Id test" [ref=f6e1396] [cursor=pointer]
+                    - cell "RE_Id test" [ref=f6e1397]:
+                      - generic "RE_Id test" [ref=f6e1399]
+                    - cell "2026-08-12 09:20 AM" [ref=f6e1400]
+                    - cell "2026-09-04 08:36 AM" [ref=f6e1401]
+                    - cell "new GR_1" [ref=f6e1402]
+                    - cell "Live" [ref=f6e1405]
+                    - cell [ref=f6e1408]:
+                      - generic [ref=f6e1409]:
+                        - button "Share Campaign" [ref=f6e1410] [cursor=pointer]
+                        - button "View Details" [ref=f6e1411] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1412] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1413] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1414] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1415] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1416]:
+                    - cell [ref=f6e1417]:
+                      - button [ref=f6e1418]
+                    - cell [ref=f6e1426]:
+                      - checkbox "Select campaign cach test_1" [disabled] [ref=f6e1428]
+                    - cell "cach test_1" [ref=f6e1429]:
+                      - generic "cach test_1" [ref=f6e1431]
+                    - cell "2026-08-13 02:04 AM" [ref=f6e1432]
+                    - cell "N/A" [ref=f6e1433]
+                    - cell "email" [ref=f6e1434]
+                    - cell "Expired" [ref=f6e1437]
+                    - cell [ref=f6e1440]:
+                      - generic [ref=f6e1441]:
+                        - button "Share Campaign" [ref=f6e1442] [cursor=pointer]
+                        - button "View Details" [ref=f6e1443] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1444] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1445] [cursor=pointer]
+                        - button "Pause Campaign" [disabled]
+                        - button "Stop Campaign" [disabled]
+                        - button "Delete Campaign" [ref=f6e1446] [cursor=pointer]
+                  - row [ref=f6e1447]:
+                    - cell [ref=f6e1448]:
+                      - button [ref=f6e1449]
+                    - cell [ref=f6e1457]:
+                      - checkbox "Select campaign cach test_1_copy" [disabled] [ref=f6e1459]
+                    - cell "cach test_1_copy" [ref=f6e1460]:
+                      - generic "cach test_1_copy" [ref=f6e1462]
+                    - cell "2026-08-13 02:35 AM" [ref=f6e1463]
+                    - cell "N/A" [ref=f6e1464]
+                    - cell "email" [ref=f6e1465]
+                    - cell "Expired" [ref=f6e1468]
+                    - cell [ref=f6e1471]:
+                      - generic [ref=f6e1472]:
+                        - button "Share Campaign" [ref=f6e1473] [cursor=pointer]
+                        - button "View Details" [ref=f6e1474] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1475] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1476] [cursor=pointer]
+                        - button "Pause Campaign" [disabled]
+                        - button "Stop Campaign" [disabled]
+                        - button "Delete Campaign" [ref=f6e1477] [cursor=pointer]
+                  - row [ref=f6e1478]:
+                    - cell [ref=f6e1479]:
+                      - button [ref=f6e1480]
+                    - cell [ref=f6e1488]:
+                      - checkbox "Select campaign cach test_3" [ref=f6e1490] [cursor=pointer]
+                    - cell "cach test_3" [ref=f6e1491]:
+                      - generic "cach test_3" [ref=f6e1493]
+                    - cell "2026-08-13 02:39 AM" [ref=f6e1494]
+                    - cell "2026-08-28 02:47 AM" [ref=f6e1495]
+                    - cell "email" [ref=f6e1496]
+                    - cell "Live" [ref=f6e1499]
+                    - cell [ref=f6e1502]:
+                      - generic [ref=f6e1503]:
+                        - button "Share Campaign" [ref=f6e1504] [cursor=pointer]
+                        - button "View Details" [ref=f6e1505] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1506] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1507] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1508] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1509] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1510]:
+                    - cell [ref=f6e1511]:
+                      - button [ref=f6e1512]
+                    - cell [ref=f6e1520]:
+                      - checkbox "Select campaign Re_cacheTest_master" [ref=f6e1522] [cursor=pointer]
+                    - cell "Re_cacheTest_master" [ref=f6e1523]:
+                      - generic "Re_cacheTest_master" [ref=f6e1525]
+                    - cell "2026-08-13 07:50 AM" [ref=f6e1526]
+                    - cell "N/A" [ref=f6e1527]
+                    - cell "email" [ref=f6e1528]
+                    - cell "Live" [ref=f6e1531]
+                    - cell [ref=f6e1534]:
+                      - generic [ref=f6e1535]:
+                        - button "Share Campaign" [ref=f6e1536] [cursor=pointer]
+                        - button "View Details" [ref=f6e1537] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1538] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1539] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1540] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1541] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1542]:
+                    - cell [ref=f6e1543]:
+                      - button [ref=f6e1544]
+                    - cell [ref=f6e1552]:
+                      - checkbox "Select campaign Redirection_cache_1" [disabled] [ref=f6e1554]
+                    - cell "Redirection_cache_1" [ref=f6e1555]:
+                      - generic "Redirection_cache_1" [ref=f6e1557]
+                    - cell "2026-08-16 06:03 AM" [ref=f6e1558]
+                    - cell "2026-08-16 08:04 AM" [ref=f6e1559]
+                    - cell "email" [ref=f6e1560]
+                    - cell "Expired" [ref=f6e1563]
+                    - cell [ref=f6e1566]:
+                      - generic [ref=f6e1567]:
+                        - button "Share Campaign" [ref=f6e1568] [cursor=pointer]
+                        - button "View Details" [ref=f6e1569] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1570] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1571] [cursor=pointer]
+                        - button "Pause Campaign" [disabled]
+                        - button "Stop Campaign" [disabled]
+                        - button "Delete Campaign" [ref=f6e1572] [cursor=pointer]
+                  - row [ref=f6e1573]:
+                    - cell [ref=f6e1574]:
+                      - button [ref=f6e1575]
+                    - cell [ref=f6e1583]:
+                      - checkbox "Select campaign Redirection_cache_1_N" [disabled] [ref=f6e1585]
+                    - cell "Redirection_cache_1_N" [ref=f6e1586]:
+                      - generic "Redirection_cache_1_N" [ref=f6e1588]
+                    - cell "2026-08-16 08:06 AM" [ref=f6e1589]
+                    - cell "N/A" [ref=f6e1590]
+                    - cell "email" [ref=f6e1591]
+                    - cell "Expired" [ref=f6e1594]
+                    - cell [ref=f6e1597]:
+                      - generic [ref=f6e1598]:
+                        - button "Share Campaign" [ref=f6e1599] [cursor=pointer]
+                        - button "View Details" [ref=f6e1600] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1601] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1602] [cursor=pointer]
+                        - button "Pause Campaign" [disabled]
+                        - button "Stop Campaign" [disabled]
+                        - button "Delete Campaign" [ref=f6e1603] [cursor=pointer]
+                  - row [ref=f6e1604]:
+                    - cell [ref=f6e1605]:
+                      - button [ref=f6e1606]
+                    - cell [ref=f6e1614]:
+                      - checkbox "Select campaign Redirection_cache_1_N_2" [ref=f6e1616] [cursor=pointer]
+                    - cell "Redirection_cache_1_N_2" [ref=f6e1617]:
+                      - generic "Redirection_cache_1_N_2" [ref=f6e1619]
+                    - cell "2026-08-16 08:31 AM" [ref=f6e1620]
+                    - cell "N/A" [ref=f6e1621]
+                    - cell "email, web" [ref=f6e1622]:
+                      - generic [ref=f6e1623]:
+                        - generic [ref=f6e1624]: email,
+                        - generic [ref=f6e1625]: web
+                    - cell "Live" [ref=f6e1626]
+                    - cell [ref=f6e1629]:
+                      - generic [ref=f6e1630]:
+                        - button "Share Campaign" [ref=f6e1631] [cursor=pointer]
+                        - button "View Details" [ref=f6e1632] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1633] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1634] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1635] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1636] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1637]:
+                    - cell [ref=f6e1638]:
+                      - button [ref=f6e1639]
+                    - cell [ref=f6e1647]:
+                      - checkbox "Select campaign RE_ZW" [ref=f6e1649] [cursor=pointer]
+                    - cell "RE_ZW" [ref=f6e1650]:
+                      - generic "RE_ZW" [ref=f6e1652]
+                    - cell "2026-08-18 02:25 AM" [ref=f6e1653]
+                    - cell "N/A" [ref=f6e1654]
+                    - cell "web" [ref=f6e1655]
+                    - cell "Live" [ref=f6e1658]
+                    - cell [ref=f6e1661]:
+                      - generic [ref=f6e1662]:
+                        - button "Share Campaign" [ref=f6e1663] [cursor=pointer]
+                        - button "View Details" [ref=f6e1664] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1665] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1666] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1667] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1668] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1669]:
+                    - cell [ref=f6e1670]:
+                      - button [ref=f6e1671]
+                    - cell [ref=f6e1679]:
+                      - checkbox "Select campaign ZT_1" [ref=f6e1681] [cursor=pointer]
+                    - cell "ZT_1" [ref=f6e1682]:
+                      - generic "ZT_1" [ref=f6e1684]
+                    - cell "2026-08-18 03:46 AM" [ref=f6e1685]
+                    - cell "N/A" [ref=f6e1686]
+                    - cell "web" [ref=f6e1687]
+                    - cell "Live" [ref=f6e1690]
+                    - cell [ref=f6e1693]:
+                      - generic [ref=f6e1694]:
+                        - button "Share Campaign" [ref=f6e1695] [cursor=pointer]
+                        - button "View Details" [ref=f6e1696] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1697] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1698] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1699] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1700] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1701]:
+                    - cell [ref=f6e1702]:
+                      - button [ref=f6e1703]
+                    - cell [ref=f6e1711]:
+                      - checkbox "Select campaign RE_MIG_Master_edit_2" [ref=f6e1713] [cursor=pointer]
+                    - cell "RE_MIG_Master_edit_2" [ref=f6e1714]:
+                      - generic "RE_MIG_Master_edit_2" [ref=f6e1716]
+                    - cell "2026-08-18 01:19 AM" [ref=f6e1717]
+                    - cell "N/A" [ref=f6e1718]
+                    - cell "web" [ref=f6e1719]
+                    - cell "Live" [ref=f6e1722]
+                    - cell [ref=f6e1725]:
+                      - generic [ref=f6e1726]:
+                        - button "Share Campaign" [ref=f6e1727] [cursor=pointer]
+                        - button "View Details" [ref=f6e1728] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1729] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1730] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1731] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1732] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1733]:
+                    - cell [ref=f6e1734]:
+                      - button [ref=f6e1735]
+                    - cell [ref=f6e1743]:
+                      - checkbox "Select campaign MIG_re_master_1_edit" [ref=f6e1745] [cursor=pointer]
+                    - cell "MIG_re_master_1_edit" [ref=f6e1746]:
+                      - generic "MIG_re_master_1_edit" [ref=f6e1748]
+                    - cell "2026-08-18 10:57 PM" [ref=f6e1749]
+                    - cell "2026-09-05 10:55 PM" [ref=f6e1750]
+                    - cell "Notification" [ref=f6e1751]
+                    - cell "Live" [ref=f6e1754]
+                    - cell [ref=f6e1757]:
+                      - generic [ref=f6e1758]:
+                        - button "Share Campaign" [ref=f6e1759] [cursor=pointer]
+                        - button "View Details" [ref=f6e1760] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1761] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1762] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1763] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1764] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1765]:
+                    - cell [ref=f6e1766]:
+                      - button [ref=f6e1767]
+                    - cell [ref=f6e1775]:
+                      - checkbox "Select campaign R_M_1" [ref=f6e1777] [cursor=pointer]
+                    - cell "R_M_1" [ref=f6e1778]:
+                      - generic "R_M_1" [ref=f6e1780]
+                    - cell "2026-08-20 03:24 AM" [ref=f6e1781]
+                    - cell "N/A" [ref=f6e1782]
+                    - cell "web" [ref=f6e1783]
+                    - cell "Live" [ref=f6e1786]
+                    - cell [ref=f6e1789]:
+                      - generic [ref=f6e1790]:
+                        - button "Share Campaign" [ref=f6e1791] [cursor=pointer]
+                        - button "View Details" [ref=f6e1792] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1793] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1794] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1795] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1796] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1797]:
+                    - cell [ref=f6e1798]:
+                      - button [ref=f6e1799]
+                    - cell [ref=f6e1807]:
+                      - checkbox "Select campaign new R_1" [ref=f6e1809] [cursor=pointer]
+                    - cell "new R_1" [ref=f6e1810]:
+                      - generic "new R_1" [ref=f6e1812]
+                    - cell "2026-08-20 10:25 PM" [ref=f6e1813]
+                    - cell "2026-08-27 01:08 AM" [ref=f6e1814]
+                    - cell "Notification" [ref=f6e1815]
+                    - cell "Live" [ref=f6e1818]
+                    - cell [ref=f6e1821]:
+                      - generic [ref=f6e1822]:
+                        - button "Share Campaign" [ref=f6e1823] [cursor=pointer]
+                        - button "View Details" [ref=f6e1824] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1825] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1826] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1827] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1828] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1829]:
+                    - cell [ref=f6e1830]:
+                      - button [ref=f6e1831]
+                    - cell [ref=f6e1839]:
+                      - checkbox "Select campaign new R_2" [ref=f6e1841] [cursor=pointer]
+                    - cell "new R_2" [ref=f6e1842]:
+                      - generic "new R_2" [ref=f6e1844]
+                    - cell "2026-08-22 01:07 AM" [ref=f6e1845]
+                    - cell "N/A" [ref=f6e1846]
+                    - cell "Notification" [ref=f6e1847]
+                    - cell "Live" [ref=f6e1850]
+                    - cell [ref=f6e1853]:
+                      - generic [ref=f6e1854]:
+                        - button "Share Campaign" [ref=f6e1855] [cursor=pointer]
+                        - button "View Details" [ref=f6e1856] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1857] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1858] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1859] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1860] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1861]:
+                    - cell [ref=f6e1862]:
+                      - button [ref=f6e1863]
+                    - cell [ref=f6e1871]:
+                      - checkbox "Select campaign Test_Redirect_1787657046091" [ref=f6e1873] [cursor=pointer]
+                    - cell "Test_Redirect_1787657046091" [ref=f6e1874]:
+                      - generic "Test_Redirect_1787657046091" [ref=f6e1876]
+                    - cell "2030-06-01 10:00 AM" [ref=f6e1877]
+                    - cell "N/A" [ref=f6e1878]
+                    - cell "web" [ref=f6e1879]
+                    - cell "Scheduled" [ref=f6e1882]
+                    - cell [ref=f6e1885]:
+                      - generic [ref=f6e1886]:
+                        - button "Share Campaign" [ref=f6e1887] [cursor=pointer]
+                        - button "View Details" [ref=f6e1888] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1889] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1890] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1891] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1892] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1893]:
+                    - cell [ref=f6e1894]:
+                      - button [ref=f6e1895]
+                    - cell [ref=f6e1903]:
+                      - checkbox "Select campaign Test_Redirect_1787722060387" [ref=f6e1905] [cursor=pointer]
+                    - cell "Test_Redirect_1787722060387" [ref=f6e1906]:
+                      - generic "Test_Redirect_1787722060387" [ref=f6e1908]
+                    - cell "2030-06-01 10:00 AM" [ref=f6e1909]
+                    - cell "N/A" [ref=f6e1910]
+                    - cell "web" [ref=f6e1911]
+                    - cell "Scheduled" [ref=f6e1914]
+                    - cell [ref=f6e1917]:
+                      - generic [ref=f6e1918]:
+                        - button "Share Campaign" [ref=f6e1919] [cursor=pointer]
+                        - button "View Details" [ref=f6e1920] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1921] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1922] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1923] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1924] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1925]:
+                    - cell [ref=f6e1926]:
+                      - button [ref=f6e1927]
+                    - cell [ref=f6e1935]:
+                      - checkbox "Select campaign Test_RD_1" [ref=f6e1937] [cursor=pointer]
+                    - cell "Test_RD_1" [ref=f6e1938]:
+                      - generic "Test_RD_1" [ref=f6e1940]
+                    - cell "2030-01-01 12:00 PM" [ref=f6e1941]
+                    - cell "N/A" [ref=f6e1942]
+                    - cell "new GR_1" [ref=f6e1943]
+                    - cell "Scheduled" [ref=f6e1946]
+                    - cell [ref=f6e1949]:
+                      - generic [ref=f6e1950]:
+                        - button "Share Campaign" [ref=f6e1951] [cursor=pointer]
+                        - button "View Details" [ref=f6e1952] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1953] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1954] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1955] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1956] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1957]:
+                    - cell [ref=f6e1958]:
+                      - button [ref=f6e1959]
+                    - cell [ref=f6e1967]:
+                      - checkbox "Select campaign Test_Redirect_1787722918219" [ref=f6e1969] [cursor=pointer]
+                    - cell "Test_Redirect_1787722918219" [ref=f6e1970]:
+                      - generic "Test_Redirect_1787722918219" [ref=f6e1972]
+                    - cell "2030-06-01 10:00 AM" [ref=f6e1973]
+                    - cell "N/A" [ref=f6e1974]
+                    - cell "web" [ref=f6e1975]
+                    - cell "Scheduled" [ref=f6e1978]
+                    - cell [ref=f6e1981]:
+                      - generic [ref=f6e1982]:
+                        - button "Share Campaign" [ref=f6e1983] [cursor=pointer]
+                        - button "View Details" [ref=f6e1984] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e1985] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e1986] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e1987] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e1988] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+                  - row [ref=f6e1989]:
+                    - cell [ref=f6e1990]:
+                      - button [ref=f6e1991]
+                    - cell [ref=f6e1999]:
+                      - checkbox "Select campaign Test_Redirect_1787727975793" [ref=f6e2001] [cursor=pointer]
+                    - cell "Test_Redirect_1787727975793" [ref=f6e2002]:
+                      - generic "Test_Redirect_1787727975793" [ref=f6e2004]
+                    - cell "2030-06-01 10:00 AM" [ref=f6e2005]
+                    - cell "N/A" [ref=f6e2006]
+                    - cell "web" [ref=f6e2007]
+                    - cell "Scheduled" [ref=f6e2010]
+                    - cell [ref=f6e2013]:
+                      - generic [ref=f6e2014]:
+                        - button "Share Campaign" [ref=f6e2015] [cursor=pointer]
+                        - button "View Details" [ref=f6e2016] [cursor=pointer]
+                        - button "Edit Campaign" [ref=f6e2017] [cursor=pointer]
+                        - button "Copy Campaign" [ref=f6e2018] [cursor=pointer]
+                        - button "Pause Campaign" [ref=f6e2019] [cursor=pointer]
+                        - button "Stop Campaign" [ref=f6e2020] [cursor=pointer]
+                        - button "Delete Campaign" [disabled]
+              - status [ref=f6e2021]
+        - generic [ref=f6e2022]: "0"
+        - dialog [ref=f6e2024]:
+          - document [ref=f6e2025]:
+            - generic [ref=f6e2026]:
+              - generic [ref=f6e2027]:
+                - button [ref=f6e2028] [cursor=pointer]
+                - heading "Create campaign" [level=4] [ref=f6e2031]
+                - heading " > Campaigns >" [level=4] [ref=f6e2033]:
+                  - generic [ref=f6e2034]: 
+                  - text: "> Campaigns >"
+              - generic [ref=f6e2036]:
+                - generic [ref=f6e2037]:
+                  - generic [ref=f6e2039]:
+                    - generic [ref=f6e2041]:
+                      - generic [ref=f6e2042]: Campaign name *
+                      - textbox "Campaign name *" [ref=f6e2043]
+                      - generic [ref=f6e2185]: Please enter campaign name
+                    - generic [ref=f6e2045]:
+                      - generic [ref=f6e2046]: Campaign start date & time (PST)*
+                      - textbox "Campaign start date & time (PST)*" [ref=f6e2047]
+                      - generic [ref=f6e2186]: Please select campaign start date & time
+                    - generic [ref=f6e2049]:
+                      - generic [ref=f6e2050]: Channels
+                      - generic [ref=f6e2055]:
+                        - generic [ref=f6e2122]:
+                          - generic [ref=f6e2123]: web
+                          - button "Remove web" [ref=f6e2124] [cursor=pointer]
+                        - combobox "channels" [ref=f6e2058]
+                    - generic [ref=f6e2066]:
+                      - checkbox [ref=f6e2067]
+                      - generic [ref=f6e2068]: Set campaign end date & time (PST)
+                    - generic [ref=f6e2070]:
+                      - generic [ref=f6e2071]: Description
+                      - textbox "Description" [ref=f6e2072]
+                  - group "Ruleset" [ref=f6e2074]:
+                    - list [ref=f6e2130]:
+                      - listitem [ref=f6e2131]:
+                        - heading [level=2] [ref=f6e2132]:
+                          - button "web" [expanded] [ref=f6e2133] [cursor=pointer]
+                        - region "web" [ref=f6e2137]:
+                          - generic [ref=f6e2138]:
+                            - generic [ref=f6e2141] [cursor=pointer]:
+                              - generic [ref=f6e2142]: 
+                              - text: Add ruleset
+                            - generic [ref=f6e2192]:
+                              - table [ref=f6e2193]:
+                                - rowgroup [ref=f6e2194]:
+                                  - row [ref=f6e2195]:
+                                    - columnheader "Priority" [ref=f6e2196]
+                                    - columnheader "Name" [ref=f6e2197]
+                                    - columnheader "Description" [ref=f6e2198]
+                                    - columnheader "Status" [ref=f6e2199]
+                                    - columnheader "Status change" [ref=f6e2200]
+                                    - columnheader "Action" [ref=f6e2201]
+                                - rowgroup
+                              - generic [ref=f6e2202]: No records found
+                - generic [ref=f6e2079]:
+                  - generic [ref=f6e2080]:
+                    - button "Save & Activate Campaign" [ref=f6e2081] [cursor=pointer]
+                    - button "Save Campaign as Draft" [ref=f6e2082] [cursor=pointer]
+                  - button "Cancel" [ref=f6e2084] [cursor=pointer]
