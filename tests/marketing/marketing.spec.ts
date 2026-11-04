@@ -469,4 +469,301 @@ test.describe('Marketing — Bug-fix Verification (V1 server / master / Xenia-Ve
 
     await createPage.clickCancel();
   });
+
+  // ── TC-BF-MK-011 ────────────────────────────────────────────────────────
+  // POSITIVE: a program row's "−" (Remove parameter) icon starts disabled and
+  // enables as soon as that program is selected — it does NOT wait for the
+  // cycle/Gift ID to be completed. The "+" (Add parameter) icon starts (and
+  // stays) disabled until BOTH a real cycle is picked AND the Gift Product ID
+  // is filled for that row. Confirmed live: neither icon exposes a disabled
+  // attribute — enabled state is read from the icon's own cursor/opacity style.
+
+  test('TC-BF-MK-011 | The "−" icon enables once a program is selected; the "+" icon only enables once that row\'s cycle AND Gift Product ID are both completed', async () => {
+    await listPage.clickCreateButton();
+
+    await createPage.fillName('MK_QA_PlusMinus');
+    await createPage.fillStartDate(futureDateStr(5, 10, 0));
+    await createPage.selectRegion('United States');
+
+    // ── Before selecting the program: both icons disabled ──
+    expect(await createPage.isRemoveParameterIconEnabled(0), '"−" icon must start disabled before the program is selected').toBe(false);
+    expect(await createPage.isAddParameterIconEnabled(0), '"+" icon must start disabled before the program is selected').toBe(false);
+    console.log(`\n  Before selecting the program : "−" disabled, "+" disabled ✓`);
+
+    // ── Selecting the program enables "−" immediately, "+" stays disabled ──
+    await createPage.selectFirstProgram();
+    expect(await createPage.isRemoveParameterIconEnabled(0), '"−" icon must enable as soon as the program is selected').toBe(true);
+    expect(await createPage.isAddParameterIconEnabled(0), '"+" icon must stay disabled until cycle + Gift ID are completed').toBe(false);
+    console.log(`  Program selected              : "−" enabled, "+" still disabled ✓`);
+
+    // ── Completing cycle + Gift ID enables "+" too; "−" stays enabled ──
+    const pickedCycle = await createPage.selectCycleForProgramRow(0);
+    await createPage.giftProductIdInputForRow(0).fill('GF_TEST_PLUSMINUS');
+    console.log(`  Cycle picked : "${pickedCycle}", Gift Product ID filled`);
+
+    expect(await createPage.isAddParameterIconEnabled(0), '"+" icon must enable once cycle + Gift ID are both completed').toBe(true);
+    expect(await createPage.isRemoveParameterIconEnabled(0), '"−" icon must remain enabled').toBe(true);
+    console.log(`  Cycle + Gift ID completed     : "+" enabled, "−" still enabled ✓`);
+
+    await createPage.clickCancel();
+  });
+
+  // ── TC-BF-MK-012 ────────────────────────────────────────────────────────
+  // POSITIVE: once every REAL cycle option for a program has been used (only
+  // the disabled "No cycle" placeholder remains), the "+" icon re-disables —
+  // there's nothing left for it to add. Confirmed live for the WELLNESS /
+  // Quarterly row (Region = United States): exactly 2 real cycles exist
+  // ("Oct 1, 2026" and "Jan 1, 2027").
+
+  test('TC-BF-MK-012 | The "+" icon disables again once every available cycle for a program has been selected', async () => {
+    await listPage.clickCreateButton();
+
+    await createPage.fillName('MK_QA_MaxCycle');
+    await createPage.fillStartDate(futureDateStr(5, 10, 0));
+    await createPage.selectRegion('United States');
+    await createPage.selectFirstProgram();
+
+    // ── First cycle completed — "+" enables (one real cycle still available) ──
+    const cycle1 = await createPage.selectCycleForProgramRow(0);
+    await createPage.giftProductIdInputForRow(0).fill('GF_MAXCYCLE_1');
+    expect(await createPage.isAddParameterIconEnabled(0), '"+" must be enabled after the first cycle is completed').toBe(true);
+    console.log(`\n  First cycle completed  : "${cycle1}" — "+" enabled ✓`);
+
+    // ── Add and complete the second (last remaining) cycle via "+" ──
+    const cycle2 = await createPage.addAnotherCycleForProgramRow(0, 'GF_MAXCYCLE_2');
+    console.log(`  Second cycle completed : "${cycle2}" (via "+")`);
+
+    expect(cycle1, 'the two cycles used must be different').not.toBe(cycle2);
+
+    // ── No real cycles remain — "+" must disable again ──
+    expect(await createPage.isAddParameterIconEnabled(0), '"+" must disable once every real cycle has been used').toBe(false);
+    console.log(`  All available cycles used — "+" disabled ✓`);
+
+    await createPage.clickCancel();
+  });
+
+  // ── TC-BF-MK-013 ────────────────────────────────────────────────────────
+  // POSITIVE: after every available cycle is used (confirmed in TC-012 —
+  // "+" disables), removing one of the completed cycle entries via its "−"
+  // icon frees up a slot again and re-enables "+".
+
+  test('TC-BF-MK-013 | Removing an added cycle re-enables the "+" icon', async () => {
+    await listPage.clickCreateButton();
+
+    await createPage.fillName('MK_QA_RemoveCycle');
+    await createPage.fillStartDate(futureDateStr(5, 10, 0));
+    await createPage.selectRegion('United States');
+    await createPage.selectFirstProgram();
+
+    const cycle1 = await createPage.selectCycleForProgramRow(0);
+    await createPage.giftProductIdInputForRow(0).fill('GF_RC_1');
+    const cycle2 = await createPage.addAnotherCycleForProgramRow(0, 'GF_RC_2');
+    console.log(`\n  Both cycles used : "${cycle1}", "${cycle2}"`);
+
+    expect(await createPage.isAddParameterIconEnabled(0), '"+" must be disabled once both cycles are used').toBe(false);
+    console.log(`  "+" disabled (no cycles left) ✓`);
+
+    await createPage.removeLastCycleForProgramRow(0);
+    console.log(`  Removed the last cycle entry ("${cycle2}") via "−"`);
+
+    expect(await createPage.isAddParameterIconEnabled(0), '"+" must re-enable once a cycle slot is freed up by removing an entry').toBe(true);
+    console.log(`  "+" re-enabled ✓`);
+
+    await createPage.clickCancel();
+  });
+
+  // ── TC-BF-MK-014 ────────────────────────────────────────────────────────
+  // POSITIVE: "Save as Draft" is available directly on Step 1 — confirmed
+  // live, it's visible as soon as name + start date + Region are filled,
+  // even before ever clicking "Setup Campaign Rules & Content". Saving from
+  // here creates a Draft campaign, and reopening it via Edit must show all
+  // the previously entered details correctly pre-filled.
+
+  test('TC-BF-MK-014 | Clicking "Save as Draft" directly on Step 1 saves a Draft campaign, and reopening it preserves the previously entered details', async () => {
+    const name = `MK_QA_Step1Draft_${Date.now()}`;
+    const startDate = futureDateStr(7, 10, 0);
+    const description = 'Step 1 direct draft save';
+
+    await listPage.clickCreateButton();
+    await createPage.fillName(name);
+    await createPage.fillStartDate(startDate);
+    await createPage.selectRegion('United States');
+    await createPage.fillDescription(description);
+
+    await expect(createPage.saveAsDraftButton(), '"Save as Draft" must be available directly on Step 1').toBeVisible({ timeout: 5000 });
+    console.log(`\n  Name, start date, Region, Description filled — "Save as Draft" visible on Step 1 ✓`);
+
+    await createPage.clickSaveAsDraft();
+    await expect(createPage.step1Heading(), 'wizard must close after a successful Save as Draft').not.toBeVisible({ timeout: 10000 });
+    console.log(`  Saved as Draft directly from Step 1 ✓`);
+
+    await listPage.searchAndAssertVisible(name);
+    await listPage.assertRowStatus(name, 'Draft');
+    console.log(`  Campaign "${name}" visible in list — Status: Draft ✓`);
+
+    await listPage.clickEditCampaign(name);
+    await expect(createPage.updateHeading(), '"Update the campaign" title must be visible').toBeVisible({ timeout: 10000 });
+
+    const reopenedName        = await createPage.nameInput().inputValue();
+    const reopenedStartDate   = await createPage.startDateInput().inputValue();
+    const reopenedDescription = await createPage.descriptionInput().inputValue();
+    const reopenedRegion      = await createPage.getRegionText();
+
+    console.log(`\n  Reopened — name        : "${reopenedName}"`);
+    console.log(`  Reopened — start date  : "${reopenedStartDate}"`);
+    console.log(`  Reopened — description : "${reopenedDescription}"`);
+    console.log(`  Reopened — region      : "${reopenedRegion}"`);
+
+    expect(reopenedName, 'name must be preserved').toBe(name);
+    expect(reopenedStartDate, 'start date must be preserved').toBe(startDate);
+    expect(reopenedDescription, 'description must be preserved').toBe(description);
+    expect(reopenedRegion, 'region must be preserved').toBe('United States');
+    console.log(`  All previously entered details preserved correctly ✓`);
+
+    await createPage.clickCancel();
+
+    // ── Cleanup: this is the first test in the suite that actually persists
+    // a real campaign — sweep it so it doesn't linger in the live list. ──
+    await listPage.searchAndAssertVisible(name);
+    await listPage.clickDeleteCampaign(name);
+    await listPage.assertDeleteDialog(name);
+    await listPage.confirmDelete();
+    await listPage.assertNoResults();
+    console.log(`  [Cleanup] "${name}" deleted ✓`);
+  });
+
+  // ── TC-BF-MK-015 ────────────────────────────────────────────────────────
+  // POSITIVE: a Draft campaign saved directly from Step 1 (TC-014's flow, no
+  // program ever selected) can be reopened via Edit to continue the
+  // creation. Confirmed live: "Update Campaign Rules & Content" enforces the
+  // same "select at least one program" requirement as a fresh create's
+  // "Setup" button — selecting a program and clicking it again successfully
+  // advances to Step 2, titled "Update Campaign Rules & Content" (NOT
+  // "Setup Campaign Rules & Content" like fresh create — distinct wording,
+  // same underlying Step 2 content).
+
+  test('TC-BF-MK-015 | Reopening a Draft campaign via Edit lets the user continue the creation — selecting a program and clicking "Update Campaign Rules & Content" advances to the "Update Campaign Rules & Content" page', async () => {
+    const name = `MK_QA_ContinueDraft_${Date.now()}`;
+    const startDate = futureDateStr(7, 10, 0);
+
+    // ── Create a minimal Draft from Step 1, same as TC-014 ──
+    await listPage.clickCreateButton();
+    await createPage.fillName(name);
+    await createPage.fillStartDate(startDate);
+    await createPage.selectRegion('United States');
+    await createPage.clickSaveAsDraft();
+    await expect(createPage.step1Heading()).not.toBeVisible({ timeout: 10000 });
+    console.log(`\n  Draft "${name}" created from Step 1 (no program selected yet)`);
+
+    await listPage.searchAndAssertVisible(name);
+    await listPage.assertRowStatus(name, 'Draft');
+
+    // ── Reopen via Edit to continue the creation ──
+    await listPage.clickEditCampaign(name);
+    await expect(createPage.updateHeading(), '"Update the campaign" title must be visible').toBeVisible({ timeout: 10000 });
+    console.log(`  Reopened via Edit — "Update the campaign" ✓`);
+
+    // ── Clicking Update without a program shows the same required-program validation ──
+    // Matched by its specific text (not a generic "first alert" grab) — the Draft-save
+    // success toast from a moment ago can still be lingering/dismissing in the DOM.
+    const expectedMessage = 'Please select at least one program';
+    const toast = createPage.programRequiredToast();
+    await createPage.clickUpdateCampaignRulesAndContent();
+    await expect(toast, 'the required-program validation toast must appear when no program is selected').toBeVisible({ timeout: 5000 });
+    await expect(createPage.updateStep2Heading(), 'must not advance to Step 2 without a program').not.toBeVisible();
+    console.log(`  Clicking "Update Campaign Rules & Content" without a program : "${expectedMessage}" — stays on Step 1 ✓`);
+
+    // ── Selecting a program and retrying successfully continues the creation ──
+    await createPage.selectFirstProgram();
+    await createPage.clickUpdateCampaignRulesAndContent();
+
+    const expectedTitle = 'Update Campaign Rules & Content';
+    const titleLocator = createPage.updateStep2Heading();
+    await expect(titleLocator, 'Step 2 title must be visible once a program is selected').toBeVisible({ timeout: 10000 });
+    const actualTitle = (await titleLocator.textContent())?.trim();
+    expect(actualTitle, 'actual Step 2 title must match the expected title exactly').toBe(expectedTitle);
+    console.log(`  Program selected, Update clicked again — advanced to : "${actualTitle}" ✓`);
+    console.log(`  Draft campaign creation successfully continued ✓`);
+
+    await createPage.clickCancel();
+
+    // ── Cleanup ──
+    await listPage.searchAndAssertVisible(name);
+    await listPage.clickDeleteCampaign(name);
+    await listPage.assertDeleteDialog(name);
+    await listPage.confirmDelete();
+    await listPage.assertNoResults();
+    console.log(`  [Cleanup] "${name}" deleted ✓`);
+  });
+
+  // ── TC-BF-MK-016 ────────────────────────────────────────────────────────
+  // POSITIVE: on Step 2, clicking "+ Add ruleset" opens the "Add ruleset"
+  // page, which defaults its Defining rule to the campaign's own Campaign
+  // Management ID (Attribute: "Campaign Management ID [Session]", Operator:
+  // "Equals"). The Value must exactly match the cmgmtId auto-generated on
+  // Step 1 — read live from both places and compared, not hardcoded.
+
+  test('TC-BF-MK-016 | Clicking "+ Add ruleset" opens the "Add ruleset" page, defaulting the rule to the Step 1 Campaign Management ID', async () => {
+    await listPage.clickCreateButton();
+
+    await createPage.fillName('MK_QA_AddRuleset');
+    await createPage.fillStartDate(futureDateStr(5, 10, 0));
+    await createPage.selectRegion('United States');
+    await createPage.selectFirstProgram();
+
+    const step1CmgmtId = await createPage.getCmgmtId();
+    console.log(`\n  Step 1 Campaign Management ID : "${step1CmgmtId}"`);
+
+    await createPage.clickSetupCampaignRulesAndContent();
+    await expect(createPage.step2Heading()).toBeVisible({ timeout: 10000 });
+
+    await createPage.clickAddRulesetLink();
+    console.log(`  "+ Add ruleset" clicked — "Add ruleset" page opened ✓`);
+
+    const defaultValue = await createPage.getAddRulesetDefaultValue();
+    console.log(`  "Add ruleset" default rule Value : "${defaultValue}"`);
+
+    expect(defaultValue, 'the default rule\'s Value must exactly match the Step 1 Campaign Management ID').toBe(step1CmgmtId);
+    console.log(`  Matches Step 1's Campaign Management ID exactly ✓`);
+
+    await createPage.cancelAddRulesetDialog();
+    await createPage.clickCancel();
+  });
+
+  // ── TC-BF-MK-017 ────────────────────────────────────────────────────────
+  // NEGATIVE: clicking the "Add ruleset" submit button inside the "Add
+  // ruleset" dialog without entering a Name shows an INLINE validation error
+  // (not a host-page toast) and the dialog stays open.
+
+  test('TC-BF-MK-017 | Negative — clicking "Add ruleset" without a Name shows the exact validation message "Please enter ruleset name"', async () => {
+    await listPage.clickCreateButton();
+
+    await createPage.fillName('MK_QA_RulesetName');
+    await createPage.fillStartDate(futureDateStr(5, 10, 0));
+    await createPage.selectRegion('United States');
+    await createPage.selectFirstProgram();
+    await createPage.clickSetupCampaignRulesAndContent();
+    await expect(createPage.step2Heading()).toBeVisible({ timeout: 10000 });
+
+    await createPage.clickAddRulesetLink();
+    console.log(`\n  "Add ruleset" dialog opened (Name left empty)`);
+
+    await createPage.clickAddRulesetSubmit();
+
+    const expectedMessage = 'Please enter ruleset name';
+    const errorLocator = createPage.rulesetNameRequiredError();
+    await expect(errorLocator, 'inline validation message must be visible when Name is empty').toBeVisible({ timeout: 5000 });
+    const actualMessage = (await errorLocator.textContent())?.trim();
+
+    console.log(`  Expected message : "${expectedMessage}"`);
+    console.log(`  Actual message   : "${actualMessage}"`);
+    expect(actualMessage, 'actual validation message must match the expected text exactly').toBe(expectedMessage);
+    console.log(`  Actual message matches expected message ✓`);
+
+    await expect(createPage.addRulesetDialog(), 'the "Add ruleset" dialog must stay open').toBeVisible();
+    console.log(`  "Add ruleset" dialog stays open ✓`);
+
+    await createPage.cancelAddRulesetDialog();
+    await createPage.clickCancel();
+  });
 });

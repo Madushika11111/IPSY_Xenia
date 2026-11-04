@@ -63,6 +63,11 @@ export class MarketingCreatePage {
     return this.frame.getByRole('heading', { name: 'Setup Campaign Rules & Content' });
   }
 
+  /** Confirmed live: Edit/continue-Draft mode's Step 2 is titled "Update Campaign Rules & Content" — NOT "Setup..." like fresh create's. Distinct heading, same underlying Step 2 content (URL parameters, Ruleset section, Preview & Publish/Save as Draft/Cancel). */
+  updateStep2Heading(): Locator {
+    return this.frame.getByRole('heading', { name: 'Update Campaign Rules & Content' });
+  }
+
   step3Heading(): Locator {
     return this.frame.getByRole('heading', { name: 'Preview', exact: true });
   }
@@ -255,6 +260,65 @@ export class MarketingCreatePage {
     return this.programRow(index).getByPlaceholder('Enter Gift product ID');
   }
 
+  /**
+   * The +/- icons have no disabled attribute or aria-disabled — their enabled
+   * state is purely a `cursor`/`opacity` inline style on the <svg> itself.
+   * Confirmed live:
+   *  - "Remove parameter" (−): disabled until the program row is checked,
+   *    then stays enabled regardless of cycle/Gift ID completion. There is
+   *    one "−" per cycle sub-entry once "+" has been used to add more than
+   *    one — `.first()` checks the row's original (first) entry.
+   *  - "Add parameter" (+): disabled until BOTH a real cycle is picked AND
+   *    the Gift Product ID is filled for that row — and re-disables once
+   *    every real cycle option for that program has been used up (only the
+   *    disabled "No cycle" placeholder remains). There is exactly one "+"
+   *    per program row regardless of how many cycle sub-entries it has.
+   */
+  private async isIconEnabled(index: number, iconName: 'Add parameter' | 'Remove parameter'): Promise<boolean> {
+    const style = (await this.programRow(index).getByRole('img', { name: iconName }).first().getAttribute('style')) ?? '';
+    return style.includes('cursor: pointer');
+  }
+
+  /**
+   * Clicks the "+" (Add parameter) icon for a program row to add another
+   * cycle sub-entry, then selects the first REAL (non-disabled) remaining
+   * cycle option for that NEW sub-entry and fills its Gift Product ID.
+   * Returns the picked cycle's text.
+   */
+  async addAnotherCycleForProgramRow(index: number, giftProductId: string): Promise<string> {
+    const row = this.programRow(index);
+    await row.getByRole('img', { name: 'Add parameter' }).click();
+    const newCombo = row.getByRole('cell').last().getByRole('combobox').last();
+    await newCombo.click({ timeout: 8000 });
+    const options = this.frame.locator('[class*="-menu"] [class*="-option"]');
+    await expect(options.first()).toBeVisible({ timeout: 5000 });
+    const count = await options.count();
+    for (let i = 0; i < count; i++) {
+      const opt = options.nth(i);
+      const ariaDisabled = await opt.getAttribute('aria-disabled');
+      if (ariaDisabled !== 'true') {
+        const text = ((await opt.textContent()) ?? '').trim();
+        await opt.click();
+        await row.getByRole('cell').last().getByPlaceholder('Enter Gift product ID').last().fill(giftProductId);
+        return text;
+      }
+    }
+    throw new Error(`No selectable (non-"No cycle") option found when adding another cycle for program row ${index}`);
+  }
+
+  async isAddParameterIconEnabled(index: number): Promise<boolean> {
+    return this.isIconEnabled(index, 'Add parameter');
+  }
+
+  /** Clicks the LAST (most recently added) cycle sub-entry's "−" icon, removing it. */
+  async removeLastCycleForProgramRow(index: number): Promise<void> {
+    await this.programRow(index).getByRole('cell').last().getByRole('img', { name: 'Remove parameter' }).last().click();
+  }
+
+  async isRemoveParameterIconEnabled(index: number): Promise<boolean> {
+    return this.isIconEnabled(index, 'Remove parameter');
+  }
+
   /** Program table rows as "Program | Billing Cadence" strings, in display order. */
   async getProgramRows(): Promise<string[]> {
     const rows = this.dialog().locator('table').last().getByRole('row');
@@ -330,5 +394,55 @@ export class MarketingCreatePage {
 
   async isEndDateInputDisabled(): Promise<boolean> {
     return this.endDateInput().isDisabled();
+  }
+
+  // ─── Ruleset (Step 2) ────────────────────────────────────────────────────────
+
+  /**
+   * Confirmed live: clicking "Add ruleset" opens a dialog whose Defining rule
+   * defaults to a LOCKED condition — "Campaign Management ID [Session] Equals
+   * <the Step 1 cmgmtId> (Ignore Case)" — every field disabled. The Value
+   * shown is always the CURRENT campaign's own cmgmtId, exactly matching
+   * getCmgmtId() read from Step 1.
+   */
+  addRulesetDialog(): Locator {
+    return this.frame.getByRole('dialog', { name: 'Add ruleset' });
+  }
+
+  async clickAddRulesetLink(): Promise<void> {
+    await this.frame.getByText('Add ruleset').click();
+    await expect(this.addRulesetDialog()).toBeVisible({ timeout: 10000 });
+  }
+
+  addRulesetValueField(): Locator {
+    return this.addRulesetDialog().getByRole('textbox', { name: 'Value' });
+  }
+
+  async getAddRulesetDefaultValue(): Promise<string> {
+    return this.addRulesetValueField().inputValue();
+  }
+
+  rulesetNameInput(): Locator {
+    return this.addRulesetDialog().getByRole('textbox', { name: 'Name *' });
+  }
+
+  async clickAddRulesetSubmit(): Promise<void> {
+    await this.addRulesetDialog().getByRole('button', { name: 'Add ruleset', exact: true }).click();
+  }
+
+  /**
+   * Confirmed live: renders as an INLINE error inside the dialog (not a
+   * host-page toast) when Name is left empty — a Bootstrap-style
+   * `.invalid-feedback` div right after the Name input. Located by this
+   * class, NOT by its text, so the actual message can be read and compared
+   * against the expected text rather than matched into the selector itself.
+   */
+  rulesetNameRequiredError(): Locator {
+    return this.addRulesetDialog().locator('.invalid-feedback');
+  }
+
+  /** Scoped to the "Add ruleset" dialog specifically — avoids ambiguity with Step 2's own Cancel button when both dialogs are open at once. */
+  async cancelAddRulesetDialog(): Promise<void> {
+    await this.addRulesetDialog().getByRole('button', { name: 'Cancel' }).dispatchEvent('click');
   }
 }
